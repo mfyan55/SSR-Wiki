@@ -1,15 +1,15 @@
 
-## ===一键脚本搭建SS/SSR、V2ray、Brook、WireGuard服务器最新教程===
+## ==VPS搭建SS/SSR、V2ray、Brook、WireGuard最新翻墙教程==
 
 [一键脚本搭建 SSR 服务器教程](https://github.com/xiaoming2028/kexueshangwang/wiki/%E7%BE%8E%E5%9B%BDVPS-Hostwinds%E6%90%AD%E5%BB%BASSR%E6%95%99%E7%A8%8B%EF%BC%8CYoutube%E7%9C%8B4k%E8%A7%86%E9%A2%91%E6%97%A0%E5%8E%8B%E5%8A%9B) （图文超详细，适合新手）
 
-一键脚本搭建 SS 服务器教程（图文超详细）
+[一键脚本搭建 SS 服务器教程](https://github.com/xiaoming2028/kexueshangwang/wiki/vultr%E6%90%AD%E5%BB%BASS%E6%95%99%E7%A8%8B-vps%E6%90%AD%E5%BB%BAss%EF%BC%88%E6%9C%80%E6%96%B0%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%EF%BC%89)（图文超详细）
 
-一键脚本搭建 V2ray 服务器教程（图文超详细，适合新手）
+[一键脚本搭建 V2ray 服务器教程](https://github.com/xiaoming2028/kexueshangwang/wiki/%E7%BE%8E%E5%9B%BDVPS-Hostwinds%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC%E6%90%AD%E5%BB%BAV2Ray%E6%9C%80%E6%96%B0%E4%B8%AD%E6%96%87%E6%95%99%E7%A8%8B)（图文超详细，适合新手）
 
-一键脚本搭建 Brook 服务器教程（新的翻墙方式，速度更快）
+[一键脚本搭建 Brook 服务器教程](https://github.com/xiaoming2028/kexueshangwang/wiki/%E6%9C%80%E6%96%B0VPS%E4%B8%80%E9%94%AE%E6%90%AD%E5%BB%BABrook%E6%95%99%E7%A8%8B%EF%BC%8C%E8%B6%85%E8%AF%A6%E7%BB%86%E5%9B%BE%E6%96%87%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B)（新的科学上网方式，速度更快）
 
-一键脚本搭建 WireGuard 服务器教程（新的翻墙方式，更安全）
+[一键脚本搭建 WireGuard 服务器教程](https://github.com/xiaoming2028/kexueshangwang/wiki/VPS%E6%90%AD%E5%BB%BAWireGuard%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%B8%AD%E6%96%87%E6%95%99%E7%A8%8B-%E5%8F%AF%E5%A4%8D%E6%B4%BB%E8%A2%AB%E5%A2%99IP)（新的翻墙方式，更安全）
 
 ## ===VPS推荐===
 
