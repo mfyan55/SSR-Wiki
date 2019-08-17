@@ -27,7 +27,7 @@
 
 ## === SSR各种客户端版本===
 
-各种客户端版本下载地址：[各版本SS客户端&SSR客户端官方下载地址](https://github.com/xiaoming2028/kexueshangwang/releases)
+各种客户端版本下载地址：[各版本SSR客户端官方下载地址](https://github.com/xiaoming2028/kexueshangwang/releases)
 
 ## ===免费SS/SSR节点列表===（不定期更新账号ip或端口或密码）
 
