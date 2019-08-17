@@ -264,7 +264,7 @@ reboot
 
 ## 5、客户端搭建ssr代理
 
-各种客户端版本下载地址：[各版本SS客户端&SSR客户端官方下载地址](https://github.com/xiaoming2028/kexueshangwang/releases)
+各种客户端版本下载地址：[各版本SSR客户端官方下载地址](https://github.com/xiaoming2028/kexueshangwang/releases)
 
 以Windows为例：
 
