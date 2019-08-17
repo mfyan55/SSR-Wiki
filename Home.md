@@ -25,9 +25,9 @@
 
 通过[**本优惠链接进入**](https://affiliates.hostwinds.com/hostwinds.php?id=7011&url=1224)Hostwinds 首页可以获得 6 折优惠。
 
-## === SSR各种客户端版本===
+## ===各种翻墙软件下载===
 
-各种客户端版本下载地址：[各版本SSR客户端官方下载地址](https://github.com/xiaoming2028/kexueshangwang/releases)
+各种客户端版本下载地址：[各版本客户端官方下载地址](https://github.com/xiaoming2028/kexueshangwang/releases)
 
 ## ===免费SS/SSR节点列表===（不定期更新账号ip或端口或密码）
 
