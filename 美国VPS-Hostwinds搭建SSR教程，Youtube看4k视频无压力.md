@@ -274,7 +274,7 @@ reboot
 
 **PAC模式**是指国内可以访问的站点直接访问，不能直接访问的再走shadowsocksR代理~
 
-OK！一键脚本搭建shadowsocksR完毕！科学上网吧，兄弟！Google
+OK！一键脚本搭建shadowsocksR完毕！科学上网吧，兄弟！
 
 
 
