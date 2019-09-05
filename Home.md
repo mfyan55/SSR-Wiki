@@ -36,4 +36,4 @@
 
 免费账号用的人多，所以有速度限制，如果想高速翻墙上网、学习翻墙技能，可以自己搭建服务器。
 
-[SSR机场地址链接](https://justmysocks.net/members/aff.php?aff=4355)
+[SSR机场地址链接](https://justmysocks1.net/members/aff.php?aff=4355)
