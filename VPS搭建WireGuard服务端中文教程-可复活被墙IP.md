@@ -30,67 +30,43 @@
 ## 前提要求
 
 - **系统要求：**Debian 8 / 9、Ubuntu 14.04 / 16.04 / 18.04 / 18.10
-- **服务器要求：**OpenVZ 虚拟化的服务器不支持安装该VPN，其他虚拟化均可。这里我推荐使用Vultr VPS主机，注册购买教程如下：
+- **服务器要求：**OpenVZ 虚拟化的服务器不支持安装该VPN，其他虚拟化均可。这里我推荐使用Hostinger VPS主机，注册购买教程如下：
 
-#### [Vultr VPS](https://www.vultr.com/?ref=8169051-4F)主机官网账户注册
+## 购买 Hostinger VPS
 
-Vultr 官网账户注册，我们打开官网后输入邮箱和密码进行点击 Create Account 进行账户创建！限时活动，**通过文中链接注册并在 30 天内充值  25美金可获赠 50 美金额度**。
+1、通过 [Hostinger 优惠链接进入](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=18493&aff_sub=GitHub&url_id=39) Hostinger 中文版首页，选择 “产品” 下的 " VPS主机" 。
 
-访问 Vultr 活动官网地址：[Vultr活动官网](https://www.vultr.com/?ref=8169051-4F)
+![1](https://user-images.githubusercontent.com/54033249/64271400-d4cc7780-cf6f-11e9-9730-61ae0e0c52f9.jpg)
 
-[![1](https://user-images.githubusercontent.com/52620310/62409248-0a93de80-b607-11e9-9da8-99182bb51016.png)](https://user-images.githubusercontent.com/52620310/62409248-0a93de80-b607-11e9-9da8-99182bb51016.png)
+2、进入 VPS 选择页面后，根据自己的需要的配置选择套餐，一般我们选择最低配置就够用了，然后点击 “添加购物车” 按钮进入信息填写页面，如下所示：
 
-##### **账户注册注意问题**
+![2](https://user-images.githubusercontent.com/54033249/64271407-dac25880-cf6f-11e9-9799-17415bd5fc2c.jpg)
 
-账户注册密码要求至少十位，而且必须至少包含一个大写字母、一个小写字母和一个数字，如果提示注册成功需要邮箱验证的话，请到注册邮箱查看邮件并点击 Verify Your E-mail 验证邮箱（收件箱如果没有收到，查看下垃圾箱）！
+3、进入购物车界面，购买时间最少一个月，第一次购买时间越长优惠力度越大，长期使用建议购买时间长点，不然后面续费就没有那么大优惠了。确认无误后，点击 “现在结账”按钮 进入下一步，如下图所示：
 
-[![2](https://user-images.githubusercontent.com/52620310/62409253-11baec80-b607-11e9-8e85-7eb324fefa60.png)](https://user-images.githubusercontent.com/52620310/62409253-11baec80-b607-11e9-8e85-7eb324fefa60.png)
+![3](https://user-images.githubusercontent.com/54033249/64271432-e57ced80-cf6f-11e9-951f-30518ad91c78.jpg)
 
-#### 2. Vultr 账户充值
+4、进入下一页，输入你的账户信息，请确保使用有效的电子邮件地址，如下图所示：
 
-我们将 Vultr 账户注册好之后登录到 Vultr 官网后台景象账户充值。目前 Vultr 支持信用卡（Credit Card）、PayPal、比特币（Bitcoin）、支付宝（Alipay）和微信支付（WeChat Pay）五种付款方式。我们可以选择常用的支付宝和微信来进行充值即可。我们选择支付宝付款，确定首次充值额度（**最低 10 美金**），并且勾选同意条款后，点击按钮 **Pay with Alipay** 即可。
+![5](https://user-images.githubusercontent.com/54033249/64271445-e9a90b00-cf6f-11e9-8bb1-3ffe49bed013.jpg)
 
-***PS：**如果我们有优惠码的话还可以在 Enter Code 输入优惠码并点击 Apply 进行应用，目前暂无官方优惠码！*
+确认无误后，点击**创建账号并结账**按钮。
 
-[![3](https://user-images.githubusercontent.com/52620310/62409255-167fa080-b607-11e9-9117-bfb89b19d4fd.png)](https://user-images.githubusercontent.com/52620310/62409255-167fa080-b607-11e9-9117-bfb89b19d4fd.png)
+5、接下来，填写你的结算信息， Hostinger 目前提供多种支付方式：
 
-我们稍等片刻后便会跳转到我们熟悉的支付宝付款页面，直接扫一扫或者登录账户付款就可以了，我们付款成功后可以在 Vultr 后台查看余额。
+![6](https://user-images.githubusercontent.com/54033249/64271451-eca3fb80-cf6f-11e9-840f-6858036fe4dd.jpg)
 
-***PS：**为防止滥用账号重复申请，Vultr 会检测支付帐号，如果使用了同一个 PayPal 或信用卡去支付，会被 vultr 封号。*
+6、在这篇文章中，我们以支付宝为例，选择第二排的 Alipay 图标：
 
-![](https://user-images.githubusercontent.com/52620310/62409256-1aabbe00-b607-11e9-8a10-33a1da5f4251.png)
+![7](https://user-images.githubusercontent.com/54033249/64271461-f168af80-cf6f-11e9-9f20-ce5d31ae9a40.jpg)
 
-#### 3.Vultr 创建服务器
+7、点击 **Continue** 按钮，浏览器会打开支付宝结算窗口，扫码付款之后，订单就完成了。
 
-我们将左侧栏菜单切换到 Servers 进行服务器创建，我们首先选择服务器机房位置地址。这里我们搭建 SS 或 SSR 的话推荐日本东京（Tokyo，Japan）和美国洛杉矶（Los Angeles，United States）。
+这时候，你应该会收到 3 封电子邮件，其中一封是邮箱验证，为了避免以后可能遇到的麻烦，请点击邮件中的 **Verify my email** 按钮以激活账户：
 
-![](https://user-images.githubusercontent.com/52620310/62409258-1e3f4500-b607-11e9-8566-7712ed814588.png)
+![8](https://user-images.githubusercontent.com/54033249/64271481-f4fc3680-cf6f-11e9-8989-466e88477be0.jpg)
 
-Vultr VPS 主机操作系统我们选择 Ubuntu。
 
-![](https://user-images.githubusercontent.com/52620310/62474576-c3a81380-b7d5-11e9-9463-4279dec0952c.png)
-
-我们选择 Vultr 套餐计划，套餐计划的最低价格根据主机位置的不同而不同，目前选择的日本东京最低套餐计划每月 5 美元，每小时 0.007 美元，配置是 1 个 CPU，1G 内存和 1000GB 流量。这个最低套餐计划完全可以满足我们个人需要了。
-
-[![6](https://user-images.githubusercontent.com/52620310/62409262-26978000-b607-11e9-961e-375ef9c7e782.png)](https://user-images.githubusercontent.com/52620310/62409262-26978000-b607-11e9-961e-375ef9c7e782.png)
-
-***PS：****我们根据自己的需求去选择相应的 VPS 主机配置，Vultr 采用小时计费，如果我们不想继续使用或创建新的 VPS 的时候，可以销毁多余的 VPS，扣除的费用是已使用小时数乘以小时单价，而不是按月扣费！*
-
-我们如果对 IPv6 有需求的话可以勾选一下，其余的就保持默认就可以了，配置完成后我们直接点击 **Deploy Now** 进行 VPS 部署。
-
-[![7](https://user-images.githubusercontent.com/52620310/62409265-2b5c3400-b607-11e9-950f-766539fe587e.png)](https://user-images.githubusercontent.com/52620310/62409265-2b5c3400-b607-11e9-950f-766539fe587e.png)
-
-我们大约等待一分钟后就可以成功部署，当显示 **Running** 时，就表示部署已完成。之后你可以随时停用、重启或销毁它。
-
-[![8](https://user-images.githubusercontent.com/52620310/62409267-2f885180-b607-11e9-9b16-cb89e92448ee.png)](https://user-images.githubusercontent.com/52620310/62409267-2f885180-b607-11e9-9b16-cb89e92448ee.png)
-
-我们将 VPS 部署成功后就可以看到服务器的基本信息：ROOT 密码、IP 地址、内存、硬盘和带宽等相关信息，这样我们就成功部署了 VPS，接下来就要进行 WireGuard 的搭建了。
-
-![9](https://user-images.githubusercontent.com/52620310/62409268-331bd880-b607-11e9-90cc-a0b2b1da7188.png)
-
-> *注意：*如果你用的也是 Vultr，且你本地没有 IPv6 地址，那就不要勾选 **Enable IPv6** ，否则可能客户端链接时可能会出错。
-
-**另外，请确保你的系统是纯净的，建议重装系统后直接开始本教程！**
 
 
 
@@ -281,14 +257,12 @@ PersistentKeepalive = 25"|sed '/^#/d;/^\s*$/d' > client.conf
 
 ```
 cat /etc/wireguard/client.conf
-
 ```
 
 #### 其他剩余其他操作：
 
 ```
 # 赋予配置文件夹权限chmod 777 -R /etc/wireguard # 打开防火墙转发功能echo 1 > /proc/sys/net/ipv4/ip_forwardecho "net.ipv4.ip_forward = 1" >> /etc/sysctl.confsysctl -p
-
 ```
 
 
@@ -308,7 +282,6 @@ wg-quick up wg0
 [#] iptables -A FORWARD -i wg0 -j ACCEPT; iptables -A FORWARD -o wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
  
 # 如果此处没有报错：RTNETLINK answers: Operation not supported，且输入内容差不多，那么说明启动成功了！
-
 ```
 
 ------
@@ -317,7 +290,6 @@ wg-quick up wg0
 
 ```
 wg-quick down wg0
-
 ```
 
 ------
@@ -326,7 +298,6 @@ wg-quick down wg0
 
 ```
 wg
-
 ```
 
 ------
@@ -340,14 +311,13 @@ wg
 systemctl enable wg-quick@wg0
 # 取消开机启动
 systemctl disable wg-quick@wg0
-
 ```
 
 
 
 ## 总结
 
-以上就是美国 VPS Vultr 一键搭建 WireGuard 的教程，通过该教程可以轻松实现 Vultr 搭建 WireGuard，希望可以帮助需要使用 Vultr VPS 搭建 WireGuard 的朋友。
+以上就是 Hostinger 一键搭建 WireGuard 的教程，通过该教程可以轻松实现 hostinger 搭建 WireGuard，希望可以帮助需要使用 Hostinger VPS 搭建 WireGuard 的朋友。
 
-[**通过本链接注册并在 30 天内充值 25 美金可获赠 50 美金额度**](https://www.vultr.com/?ref=8169051-4F)，支持支付宝付款，欢迎购买注册。
+[**Hostinger 最快VPS低至3.95美元/月**](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=18493&aff_sub=GitHub&url_id=39)，有中文界面，支持支付宝、微信付款，欢迎购买注册。
 
