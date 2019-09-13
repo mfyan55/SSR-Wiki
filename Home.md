@@ -36,4 +36,3 @@
 
 免费账号用的人多，所以有速度限制，如果想高速翻墙上网、学习翻墙技能，可以自己搭建服务器。
 
-[SS机场地址链接](https://github.com/xiaoming2028/kexueshangwang/wiki/Just-My-Socks-%E6%9C%BA%E5%9C%BA%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B)
