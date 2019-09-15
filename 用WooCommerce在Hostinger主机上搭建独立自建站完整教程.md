@@ -4,13 +4,13 @@
 
 而作为跨境电商中小卖家，仅仅依靠平台过活，似乎也变得越来越艰难了。事实上，确实有不少卖家遭遇到不公平，也变得越来越焦虑。因为有一堆要担心的事情，担心 listing 被恶意修改、担心被恶意跟买、担心 listing 被下架、担心滞销死库存、担心店铺被冻结关闭、担心海外税务合规问题甚至还担心川普心情好不好，关税加不加等等。也许正是因为这种担心与焦虑，独立自建站迎来了新的一波开店热潮。2019，亚马逊不再是跨境电商最火的话题，而是独立自建站。
 
-老实说，搭建独立自建站的方法方式实在太多了，有免费的，有廉价的也有商业版的，有[共享主机](https://affiliates.hostwinds.com/hostwinds.php?id=7011&url=1215)、有独立主机还有 [vps 服务器](https://www.vultr.com/?ref=8169051-4F)，选择哪种方式，哪款主机，也只有真正试了才知道。
+老实说，搭建独立自建站的方法方式实在太多了，有免费的，有廉价的也有商业版的，有[共享主机](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=18493&aff_sub=GitHub&url_id=39)、有独立主机还有 [vps 服务器](https://www.vultr.com/?ref=8169051-4F)，选择哪种方式，哪款主机，也只有真正试了才知道。
 
 没错，上述的这些方法方式，我都亲身折腾过。从个人实际需求和建站方式来看，Shopify 虽然足够省事也更加容易上手，不过因为价格偏高以及无法完全掌控，它并非我的首选方式。而 Magento 虽然是开源软件，从电商专业性来看，首屈一指，但老实说，即便像我这样的专业技术人员折腾起 Magento，也有些费劲，作为电商卖家，把时间浪费在折腾技术上，有些方向性错误，所以，只能放弃 Magento。最后，选择了相对轻量级的 WordPress 开源程序，搭配 WooCommerce 电商插件来搭建独立自建站。
 
-既然选择了 WordPress 开源程序，搭配 WooCommerce 电商插件来做，首先第一件事情就是为它找一个好鞍。选择了 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&url=1215) 主机，老实说，之前，我并不知道 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&url=1215) 是 WordPress 官方推荐的主机服务商，也只是从一些海外自媒体在主机对比评价上才了解到 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&url=1215)。因为 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&url=1215) 对正常运行时间、速度、安全性和客户服务支持的出色表现，Hostwinds 在 [Facebook](https://github.com/xiaoming2028/kexueshangwang/wiki) 上多项民意调查中成为获得最高排名的网络主机服务商。
+既然选择了 WordPress 开源程序，搭配 WooCommerce 电商插件来做，首先第一件事情就是为它找一个好鞍。选择 [Hostinger](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=18493&aff_sub=GitHub&url_id=39) 主机，老实说，之前，我并不知道 [Hostinger](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=18493&aff_sub=GitHub&url_id=39) 是 WordPress 官方推荐的主机服务商，也只是从一些海外自媒体在主机对比评价上才了解到 [Hostinger](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=18493&aff_sub=GitHub&url_id=39)。因为 [Hostinger](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=18493&aff_sub=GitHub&url_id=39) 对正常运行时间、速度、安全性和客户服务支持的出色表现，Hostinger 在 [Facebook](https://github.com/xiaoming2028/kexueshangwang/wiki) 上多项民意调查中成为获得最高排名的网络主机服务商。
 
-于是，抱着试试看的态度，购买了 Hostwinds 主机，经过一段时间的体验与测试，体验了主机的速度性能情况、体验了他们的客户支持情况，甚至还体验了他们的退款速度情况，最后，我想我找到了一款性价比超高的主机。我承认起初我有点怀疑，但现在我也把网站迁移到了 Hostwinds 上。也算是给 WordPress 和 Woocommerce 找到了好鞍。关键一点是少花钱，把事情办好。下面，我们就一步一步，化繁为简。分享如何用 WooCommerce 在Hostwinds 主机上搭建独立自建站完整教程。
+于是，抱着试试看的态度，购买了 Hostinger 主机，经过一段时间的体验与测试，体验了主机的速度性能情况、体验了他们的客户支持情况，甚至还体验了他们的退款速度情况，最后，我想我找到了一款性价比超高的主机。我承认起初我有点怀疑，但现在我也把网站迁移到了 Hostinger 上。也算是给 WordPress 和 Woocommerce 找到了好鞍。关键一点是少花钱，把事情办好。下面，我们就一步一步，化繁为简。分享如何用 WooCommerce 在Hostinger 主机上搭建独立自建站完整教程。
 
 
 
@@ -64,7 +64,7 @@
 
 前文已经说过，WooCommerce 是 WordPress 的一个插件，所以为了创建成功的在线商店，你首先需要拥有一个 WordPress 网站。不要担心，创建 WordPress 网站非常容易，这篇教程将一步一步指导你完成整个过程：
 
-[Hostwinds云主机限时五折优惠链接](https://affiliates.hostwinds.com/hostwinds.php?id=7011&url=1215)
+[Hostinger云主机限时五折优惠链接](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=18493&aff_sub=GitHub&url_id=39)
 
 [怎样使用Hostwinds快速搭建一个WordPress网站](https://github.com/xiaoming2028/kexueshangwang/wiki/996%E5%B7%A5%E4%BD%9C%E5%88%B6%EF%BC%9F%E4%B8%8D%E5%A6%82%E8%8A%B1%E7%82%B9%E6%97%B6%E9%97%B4%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%81%E6%95%99%E4%BD%A0%E5%A6%82%E4%BD%95%E7%94%A8WordPress%E6%90%AD%E5%BB%BA%E4%B8%93%E4%B8%9A%E7%BD%91%E7%AB%99)
 
@@ -372,6 +372,6 @@ W3 Total Cache：通过缓存加速你的网站；
 
  
 
-准备好创建 WooCommerce 电子商务网站吗？我们推荐使用 Hostwinds，这是我们见过的最快的 WordPress 托管商，只需要点击几个按钮，你就可以在几分钟内部署好一个全新的 WooCommerce 在线商店。[Hostwinds限时五折优惠链接](https://affiliates.hostwinds.com/hostwinds.php?id=7011&url=1215)
+准备好创建 WooCommerce 电子商务网站吗？我们推荐使用 Hostinger，这是我们见过的最快的 WordPress 托管商，只需要点击几个按钮，你就可以在几分钟内部署好一个全新的 WooCommerce 在线商店。[Hostinger限时五折优惠链接](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=18493&aff_sub=GitHub&url_id=39)
 
 
