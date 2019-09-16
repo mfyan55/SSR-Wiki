@@ -66,7 +66,7 @@
 
 [Hostinger云主机限时五折优惠链接](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=18493&aff_sub=GitHub&url_id=39)
 
-[怎样使用Hostwinds快速搭建一个WordPress网站](https://github.com/xiaoming2028/kexueshangwang/wiki/996%E5%B7%A5%E4%BD%9C%E5%88%B6%EF%BC%9F%E4%B8%8D%E5%A6%82%E8%8A%B1%E7%82%B9%E6%97%B6%E9%97%B4%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%81%E6%95%99%E4%BD%A0%E5%A6%82%E4%BD%95%E7%94%A8WordPress%E6%90%AD%E5%BB%BA%E4%B8%93%E4%B8%9A%E7%BD%91%E7%AB%99)
+[怎样快速搭建一个WordPress网站](https://github.com/xiaoming2028/kexueshangwang/wiki/996%E5%B7%A5%E4%BD%9C%E5%88%B6%EF%BC%9F%E4%B8%8D%E5%A6%82%E8%8A%B1%E7%82%B9%E6%97%B6%E9%97%B4%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%81%E6%95%99%E4%BD%A0%E5%A6%82%E4%BD%95%E7%94%A8WordPress%E6%90%AD%E5%BB%BA%E4%B8%93%E4%B8%9A%E7%BD%91%E7%AB%99)
 
 
 
