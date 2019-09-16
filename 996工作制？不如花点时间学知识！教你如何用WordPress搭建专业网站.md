@@ -26,7 +26,7 @@ Python 语言之父-龟叔也在推特上发表自己的看法：996 工作制�
 
 还有 Godaddy，作为专业的主机服务商，Godaddy 的 cPannel 面板倒是给力很多，不过问题也不少，速度跟不上，性能更不上，服务跟不上，确实让人头痛。
 
-考虑到这些，包括我自己本身在内，也一直在寻找最合适、最靠谱的解决访问。在反复对比权衡了各项利弊之后，最后还是选择了采用一家来自美国的公司 Hostwinds 提供的主机托管服务。关于 Hostwinds 的主机服务，我会在另外一篇文章中单独介绍，今天，我们来聊聊如何用 60 分钟通过 5 个步骤采用 WordPress 来搭建独立自建站。废话少说，我们现在开始：
+考虑到这些，包括我自己本身在内，也一直在寻找最合适、最靠谱的解决访问。在反复对比权衡了各项利弊之后，最后还是选择了采用 [Hostinger](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=18493&aff_sub=GitHub&url_id=39) 提供的主机托管服务。关于 Hostinger 的主机服务，我会在另外一篇文章中单独介绍，今天，我们来聊聊如何用 60 分钟通过 5 个步骤采用 WordPress 来搭建独立自建站。废话少说，我们现在开始：
 
 先说用什么方式搭建网站，我觉得最好的方式还是随大流，全球 32% 的网站都是采用 WordPress 开源程序搭建，绝大部分人的选择是不会错的。
 
@@ -37,95 +37,124 @@ Python 语言之父-龟叔也在推特上发表自己的看法：996 工作制�
 
 #### **2、买主机服务器**
 
-之所以推荐 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&url=1215) 的主机服务，主要还是 WordPress 官方的推荐。Hostwinds 与 WordPress 高度融合，因为其出色的速度和客服获得了行业最佳口碑。没有那么多猫腻，也没有以送域名方式诱导、年费低至 39.53 美元，30 天无条件退款，真给退，不用哭闹。
+之所以推荐 [Hostinger](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=18493&aff_sub=GitHub&url_id=39) 的主机服务，主要还是 WordPress 官方的推荐。Hostinger 与 WordPress 高度融合，因为其出色的速度和客服获得了行业最佳口碑。没有那么多猫腻，每月低至 4.75 元，30 天无条件退款，真给退，不用哭闹。为了开拓中国市场，他们甚至推出了 [中文版](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=18493&url_id=39) 网站，并且接受支付宝、微信、银联等本地付款方式。
 
-进入 **[hostwinds 官网](https://affiliates.hostwinds.com/hostwinds.php?id=7011&url=1215)**，选择一个套餐。
+首先，点击 [这里](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=18493&url_id=39) 打开 Hostinger 的中文版官方网站，然后点击红色的 **立即开始** 按钮：
 
-Basic：只能构建一个网站。
+![1](https://user-images.githubusercontent.com/54033249/64966183-e77c7000-d8d0-11e9-9784-fc5a5f05fccd.jpg)
 
-Advanced：可以构建4个网站。
+如果你在这里看到的图像与自己电脑上的略有不同，请不要担心，整个过程是一样的，Hostinger 总是在调整和改进网站。
 
-Ultimate：构建网站数量无限制。
+**选择托管计划**
 
-[Hostwinds 新用户限时优惠链接](https://affiliates.hostwinds.com/hostwinds.php?id=7011&url=1215)
+通过点击**紫色**或**红色**的**立即开始**按钮之一，选择你要开始的套餐。我通常建议选择**高级虚拟主机**或**商业虚拟主机**，因为它们提供更多无限功能。但是，如果你的预算有限，那么 **单网站主机**（Single Shared Hosting）将是更加经济实惠的选择。
 
-![1](https://user-images.githubusercontent.com/54033249/63222622-1376d980-c1dd-11e9-8fe2-a31379bdfdbe.jpg)
+![2](https://user-images.githubusercontent.com/54033249/64966590-a59ff980-d8d1-11e9-9254-1ba16a372c13.jpg)
 
-然后点击 Order Now，在下面左侧，输入名字、邮箱和密码进行注册。
+在这个例子中，我们选择最便宜的单网站主机套餐，下一个页面是购物车确认，准备好了吗？我们继续前进吧。
 
-![2](https://user-images.githubusercontent.com/54033249/63222623-17a2f700-c1dd-11e9-9dce-d5266d066528.jpg)
  
-填写个人信息
 
-![3](https://user-images.githubusercontent.com/54033249/63222624-196cba80-c1dd-11e9-9634-67cf9a8496ec.jpg)
+#### 4、注册一个账号
 
-选择网址
+域名是一个网页地址最前面的部分，并且不包含 www。例如，知乎的域名是 zhihu.com。
 
-在Domain这一栏，输入一个自己选择的网址，确保没有别人使用。如出现下图情况，就表示该域名已经有人注册了，重新换一个域名。
+一个好的域名通常十分简单，但又很有吸引力。互联网发展了这么多年，你能想到的好域名可能已经被别人注册了，所以你可能要花一段时间来找到令人满意的结果。
 
-![4](https://user-images.githubusercontent.com/54033249/63222627-1c67ab00-c1dd-11e9-9f33-8b827760a737.jpg)
+如果你已经有一个可用的域名，并希望将其用于这个新站点，那么可以不必搜索新域名；否则，请在下方填写你想要的域名，如果提示已存在，你就得重新填写一个。
 
- 然后点击 Add to Cart，免费加入购物车。
+![3](https://user-images.githubusercontent.com/54033249/64966623-b3ee1580-d8d1-11e9-9aae-7b0b6168f494.jpg)
 
-![5](https://user-images.githubusercontent.com/54033249/63222628-1eca0500-c1dd-11e9-93d5-34513b411eed.jpg)
+出于本教程的目的，我将使用一个新域名。如果你使用的是已有的域名，那么整个过程几乎完全相同，你仍然可以按照这个步骤继续进行。
 
-可以在 Package Information 中修改付费选项。其中下方的 Hostwinds Monitoring 和 Web Hosting Cloud Backups（定期备份网站）视自己的需求而定，如果不需要，可以都不勾选。
+![4](https://user-images.githubusercontent.com/54033249/64966644-c0726e00-d8d1-11e9-8a5d-6f7e62b11cb2.jpg)
 
-![6](https://user-images.githubusercontent.com/54033249/63222630-212c5f00-c1dd-11e9-8161-55de2de00ef7.jpg)
+确认无误后，点击**现在结账**按钮。
 
-最后选择支付宝完成购买
+ 
 
-![7](https://user-images.githubusercontent.com/54033249/63222634-24274f80-c1dd-11e9-9776-4e83a3d6c973.jpg)
+**注册账户**
 
-**进入 cPanel 管理面板**
+进入下一页，输入你的账户信息，请确保使用有效的电子邮件地址。
 
-完成购买后，你会收到一封邮件，里面包含 cPanel 的网址，用户名和密码。
+![5](https://user-images.githubusercontent.com/54033249/64966656-c700e580-d8d1-11e9-980c-2c6766f317d1.jpg)
 
-![8](https://user-images.githubusercontent.com/54033249/63222638-2be6f400-c1dd-11e9-8ddd-4bff949a15f2.png)
+确认无误后，点击**创建账号并结账**按钮。
 
-点击 cPanel 的地址，然后输入用户名和密码登录 cPanel。
+ 
 
-![9](https://user-images.githubusercontent.com/54033249/63222639-2e494e00-c1dd-11e9-8481-2aa609cab9ab.png)
+**输入结算信息**
 
-**在 cPannel 中通过一键安装 WordPress**
+接下来，填写你的结算信息， Hostinger 目前提供多种支付方式：
 
-a：登录 cPanel 后，在搜索框输入 Softaculous Apps Installer，然后点击它。
+![6](https://user-images.githubusercontent.com/54033249/64966666-cc5e3000-d8d1-11e9-82ba-d5e8cedc1bb4.jpg)
 
-![10](https://user-images.githubusercontent.com/54033249/63222640-30aba800-c1dd-11e9-81b6-ef52a1467e57.png)
+在这篇文章中，我们以支付宝为例，选择第二排的 Alipay 图标：
 
-b：找到 Wordpress，然后点击 install，进行安装。
+![7](https://user-images.githubusercontent.com/54033249/64966677-cff1b700-d8d1-11e9-95e0-2709f2553150.jpg)
 
-![11](https://user-images.githubusercontent.com/54033249/63222641-330e0200-c1dd-11e9-9dc5-cf65708618de.png)
+点击 **Continue** 按钮，浏览器会打开支付宝结算窗口，扫码付款之后，订单就完成了。这时候，你应该会收到 3 封电子邮件，其中一封是邮箱验证，为了避免以后可能遇到的麻烦，请点击邮件中的 **Verify my email** 按钮以激活账户：
 
-c：在下方输入在购买阶段选择的网址
-
-![12](https://user-images.githubusercontent.com/54033249/63222644-3608f280-c1dd-11e9-93a5-7912f45b4b9d.png)
-
-d：在 Admin Account 中输入用户名和密码。这是登录 Wordpress 后台的用户名和密码，确保自己保存好。
-
-![13](https://user-images.githubusercontent.com/54033249/63222646-3903e300-c1dd-11e9-8ab3-8e5f837a9efa.png)
-
-然后拉到网页最下方，点击 install 安装即可。大概十几秒钟后，WordPress就安装好了。
-
-![14](https://user-images.githubusercontent.com/54033249/63222649-3d300080-c1dd-11e9-87d6-6541029ea4c3.png)
+![8](https://user-images.githubusercontent.com/54033249/64966685-d3853e00-d8d1-11e9-9b91-d6e13c427323.jpg)
 
 #### **3、登录后台，安装模版**
 
-这时网站已经建立了，在浏览器输入你的网址，网站已经可以被正常访问。
+Hostinger 已经为你准备好所有幕后工作，但在使用网站之前，需要把域名配置好。
 
-如果你的网址是 website.com，在后面加上 /wp-admin，输入在第 3-d 步中的 WordPress 后台用户名和密码，就进入了 WordPress 后台。
+**配置域名**
 
-![15](https://user-images.githubusercontent.com/54033249/63222652-402af100-c1dd-11e9-8217-f1dd657b417b.png)
+首先打开控制面板：
 
-以后就可以在 WordPress 后台构建自己网站的内容了。
+![9](https://user-images.githubusercontent.com/54033249/64966692-d718c500-d8d1-11e9-87e4-33617416ab72.jpg)
 
-![16](https://user-images.githubusercontent.com/54033249/63222654-41f4b480-c1dd-11e9-8515-f58c86b49897.png)
+在控制面板主页，我们点击 Single Web Hosting 右侧的**设置**按钮开始安装 WordPress ，首先会询问你是否拥有域名：
+
+![10](https://user-images.githubusercontent.com/54033249/64966707-dbdd7900-d8d1-11e9-8717-23b7e8f83e0a.jpg)
+
+在这篇文章中，我使用已有域名 xiaobei-demo.com 作为示例。如果有需要，你还可以选择主机服务器的位置，在这里我们选择亚洲（新加坡）：
+
+![11](https://user-images.githubusercontent.com/54033249/64966714-df710000-d8d1-11e9-9cef-965fdc0f1f08.jpg)
+
+我们希望将 xiaobei-demo.com 留在原来的注册商（而不是转到 Hostinger ），所以点击左侧的**继续**按钮。接下来，Hostinger 会提示配置域名服务器：
+
+![12](https://user-images.githubusercontent.com/54033249/64966729-e566e100-d8d1-11e9-9e6d-785887d00770.jpg)
+
+需要注意的是，如果你直接在 Hostinger 购买新域名，那么可以省略这一步，因为 Hostinger 会自动帮你把域名服务器配置好。
+
+ 
+
+**安装 WordPress**
+
+域名配置完之后，开始安装 WordPress：
+
+![13](https://user-images.githubusercontent.com/54033249/64966741-ec8def00-d8d1-11e9-8118-cababe4f6e88.jpg)
+
+只需点击最左边的**安装 WordPress **图标，然后设置安装路径：
+
+![14](https://user-images.githubusercontent.com/54033249/64966747-f0217600-d8d1-11e9-8c3d-5ab74a552c23.jpg)
+
+如果没有什么特殊需求，保持默认即可，点击**下一步**按钮创建管理员账号：
+
+![15](https://user-images.githubusercontent.com/54033249/64966755-f44d9380-d8d1-11e9-9ed4-01c5b24e8c8e.jpg)
+
+接下来设置一些网站的额外信息。**请注意：为了确保安装成功，请将语言设置为默认的英语，网站标题也不要含有中文字样。**不要担心，这些信息在网站安装完成后可以随时修改：
+
+![16](https://user-images.githubusercontent.com/54033249/64966764-f879b100-d8d1-11e9-98b5-69bd75df5e3a.jpg)
+
+确认无误后，点击**安装**按钮，Hostinger 会自动执行，以下是提示信息：
+
+![17](https://user-images.githubusercontent.com/54033249/64966777-fdd6fb80-d8d1-11e9-8cdd-bd433f8413aa.jpg)
+
+稍等片刻，WordPress 安装完成之后，在浏览器中输入你的域名，即可看到大功告成：
+
+![18](https://user-images.githubusercontent.com/54033249/64966788-03344600-d8d2-11e9-962c-2378fe50d1ef.jpg) 
+
 
 #### **4、后台基本设置，调整模版并发布；**
 
 现有的Demo中拥有绝大部分基本内容，修改成自己的。
 
-![996工作制？不如花点时间学知识！教你如何在SiteGround上用WordPress搭建专业网站 15](https://www.chenfeiblog.com/wp-content/uploads/2019/04/1555507099523-800x473.jpg)
+![10](https://user-images.githubusercontent.com/54033249/64967360-eea47d80-d8d2-11e9-8294-737987620497.jpg)
 
 
 
@@ -137,5 +166,5 @@ d：在 Admin Account 中输入用户名和密码。这是登录 Wordpress 后�
 
 ### 总结：
 
-WordPress 的可扩展性超乎想象，这也是为什么不管是独立自建站、个人博客还是商业网站都会选择 WordPress 的最主要原因。选择一个与 WordPress 高度融合，进行过专门优化的主机能减少大量繁琐安装各种程序的时间，这里自然首推 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&url=1215)。
+WordPress 的可扩展性超乎想象，这也是为什么不管是独立自建站、个人博客还是商业网站都会选择 WordPress 的最主要原因。选择一个与 WordPress 高度融合，进行过专门优化的主机能减少大量繁琐安装各种程序的时间，这里自然首推 [Hostinger](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=18493&aff_sub=GitHub&url_id=39)。
 
