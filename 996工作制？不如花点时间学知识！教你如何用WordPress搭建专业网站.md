@@ -32,7 +32,7 @@ Python 语言之父-龟叔也在推特上发表自己的看法：996 工作制�
 
 #### **1、买域名**
 
-记住购买 .com 域名就行了，价格 10 美元左右。可以到 [www.namecheap.com](http://www.namecheap.com) 上购买，就如这家公司的域名名称一样，name cheap，特色就是域名便宜卖。
+记住购买 .com 域名就行了，价格 10 美元左右。可以到 [www.namecheap.com](https://namecheap.pxf.io/JykzR) 上购买，就如这家公司的域名名称一样，name cheap，特色就是域名便宜卖。
 
 #### **2、买主机服务器**
 
