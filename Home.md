@@ -25,7 +25,6 @@
 
 限时活动，通过 [**本优惠链接**](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1224) 进入Hostwinds 首页可以获得 6 折优惠，支持支付宝付款，欢迎购买注册。
 
-.
 
 
 
