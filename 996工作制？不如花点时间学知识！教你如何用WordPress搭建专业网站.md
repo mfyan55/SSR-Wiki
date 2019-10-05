@@ -136,4 +136,4 @@ d：在 Admin Account 中输入用户名和密码。这是登录 Wordpress 后�
 
 ### 总结：
 
-WordPress 的可扩展性超乎想象，这也是为什么不管是独立自建站、个人博客还是商业网站都会选择 WordPress 的最主要原因。选择一个与 WordPress 高度融合，进行过专门优化的主机能减少大量繁琐安装各种程序的时间，这里自然首推 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url= 1215)。
+WordPress 的可扩展性超乎想象，这也是为什么不管是独立自建站、个人博客还是商业网站都会选择 WordPress 的最主要原因。选择一个与 WordPress 高度融合，进行过专门优化的主机能减少大量繁琐安装各种程序的时间，这里自然首推 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1215)。
