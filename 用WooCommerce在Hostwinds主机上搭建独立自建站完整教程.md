@@ -8,7 +8,7 @@
 
 没错，上述的这些方法方式，我都亲身折腾过。从个人实际需求和建站方式来看，Shopify 虽然足够省事也更加容易上手，不过因为价格偏高以及无法完全掌控，它并非我的首选方式。而 Magento 虽然是开源软件，从电商专业性来看，首屈一指，但老实说，即便像我这样的专业技术人员折腾起 Magento，也有些费劲，作为电商卖家，把时间浪费在折腾技术上，有些方向性错误，所以，只能放弃 Magento。最后，选择了相对轻量级的 WordPress 开源程序，搭配 WooCommerce 电商插件来搭建独立自建站。
 
-既然选择了 WordPress 开源程序，搭配 WooCommerce 电商插件来做，首先第一件事情就是为它找一个好鞍。选择 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1224) 主机，老实说，之前，我并不知道 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1224) 是 WordPress 官方推荐的主机服务商，也只是从一些海外自媒体在主机对比评价上才了解到 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1224)。因为 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1224) 对正常运行时间、速度、安全性和客户服务支持的出色表现，Hostinger 在 [Facebook](https://github.com/xiaoming2028/kexueshangwang/wiki) 上多项民意调查中成为获得最高排名的网络主机服务商。
+既然选择了 WordPress 开源程序，搭配 WooCommerce 电商插件来做，首先第一件事情就是为它找一个好鞍。选择 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1224) 主机，老实说，之前，我并不知道 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1224) 是 WordPress 官方推荐的主机服务商，也只是从一些海外自媒体在主机对比评价上才了解到 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1224)。因为 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1224) 对正常运行时间、速度、安全性和客户服务支持的出色表现，Hostwinds 在 [Facebook](https://github.com/xiaoming2028/kexueshangwang/wiki) 上多项民意调查中成为获得最高排名的网络主机服务商。
 
 于是，抱着试试看的态度，购买了 Hostwinds 主机，经过一段时间的体验与测试，体验了主机的速度性能情况、体验了他们的客户支持情况，甚至还体验了他们的退款速度情况，最后，我想我找到了一款性价比超高的主机。我承认起初我有点怀疑，但现在我也把网站迁移到了 Hostwinds 上。也算是给 WordPress 和 Woocommerce 找到了好鞍。关键一点是少花钱，把事情办好。下面，我们就一步一步，化繁为简。分享如何用 WooCommerce 在Hostwinds 主机上搭建独立自建站完整教程。
 
