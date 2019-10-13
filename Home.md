@@ -1,9 +1,9 @@
-### 为什么要自己搭建翻墙服务？
+### 为什么要自己搭建科学上网服务？
 
-你也许会觉得买翻墙服务也很方便，但是你得要考虑以下几个问题。首先，买的翻墙服务，限制很多，终端可能只能同时在线 2 个，每个月就一点点流量可能价格却不便宜，有时候还被别人做手脚，流量跑的贼快；其次，别人收钱跑路怎么办？很多这种情况的；更重要的是，如果有心人做了一点手脚，是可以得到你的访问记录的；而自己搭建翻墙服务，一键脚本也就 10 来分钟就可以搞定。
+你也许会觉得买梯子也很方便，但是你得要考虑以下几个问题。首先，买的梯子限制很多，终端可能只能同时在线 2 个，每个月就一点点流量可能价格却不便宜，有时候还被别人做手脚，流量跑的贼快；其次，别人收钱跑路怎么办？很多这种情况的；更重要的是，如果有心人做了一点手脚，是可以得到你的访问记录的；而自己搭建科学上网服务，一键脚本也就 10 来分钟就可以搞定。
 
 
-## ==VPS搭建SS/SSR、V2ray、Brook、WireGuard最新翻墙教程==
+## ==VPS搭建SS/SSR、V2ray、Brook、WireGuard最新搭建教程==
 
 [一键脚本搭建 SSR 服务器教程](https://github.com/xiaoming2028/FreeNetwork/wiki/VPS%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC%E6%90%AD%E5%BB%BASSR%E6%95%99%E7%A8%8B%EF%BC%8CYoutube%E7%9C%8B4k%E8%A7%86%E9%A2%91%E6%97%A0%E5%8E%8B%E5%8A%9B) （图文超详细，适合新手）
 
@@ -13,9 +13,9 @@
 
 [一键脚本搭建 Brook 服务器教程](https://github.com/xiaoming2028/kexueshangwang/wiki/%E6%9C%80%E6%96%B0VPS%E4%B8%80%E9%94%AE%E6%90%AD%E5%BB%BABrook%E6%95%99%E7%A8%8B%EF%BC%8C%E8%B6%85%E8%AF%A6%E7%BB%86%E5%9B%BE%E6%96%87%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B)（新的科学上网方式，速度更快）
 
-[一键脚本搭建 WireGuard 服务器教程](https://github.com/xiaoming2028/kexueshangwang/wiki/VPS%E6%90%AD%E5%BB%BAWireGuard%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%B8%AD%E6%96%87%E6%95%99%E7%A8%8B-%E5%8F%AF%E5%A4%8D%E6%B4%BB%E8%A2%AB%E5%A2%99IP)（新的翻墙方式，更安全）
+[一键脚本搭建 WireGuard 服务器教程](https://github.com/xiaoming2028/kexueshangwang/wiki/VPS%E6%90%AD%E5%BB%BAWireGuard%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%B8%AD%E6%96%87%E6%95%99%E7%A8%8B-%E5%8F%AF%E5%A4%8D%E6%B4%BB%E8%A2%AB%E5%A2%99IP)（新的科学上网方式，更安全）
 
-## ===各种翻墙软件下载===
+## ===各种梯子软件下载===
 
 各种客户端版本下载地址：[各版本客户端官方下载地址](https://github.com/xiaoming2028/kexueshangwang/releases)
 
@@ -39,5 +39,5 @@
 
 ## ===免费SS/SSR节点列表===（不定期更新账号ip或端口或密码）
 
-免费账号用的人多，所以有速度限制，如果想高速翻墙上网、学习翻墙技能，可以自己搭建服务器。
+免费账号用的人多，所以有速度限制，如果想高速科学上网、学习科学上网技能，可以自己搭建服务器。
 
