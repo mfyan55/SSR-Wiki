@@ -7,7 +7,7 @@
 
 [一键脚本搭建 SSR 服务器教程](https://github.com/xiaoming2028/FreeNetwork/wiki/VPS%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC%E6%90%AD%E5%BB%BASSR%E6%95%99%E7%A8%8B%EF%BC%8CYoutube%E7%9C%8B4k%E8%A7%86%E9%A2%91%E6%97%A0%E5%8E%8B%E5%8A%9B) （图文超详细，适合新手）
 
-[一键脚本搭建 SS 服务器教程](https://github.com/xiaoming2028/kexueshangwang/wiki/%E4%B8%80%E9%94%AE%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BASS%E6%95%99%E7%A8%8B-vps%E6%90%AD%E5%BB%BAss%EF%BC%88%E6%9C%80%E6%96%B0%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%EF%BC%89)（图文超详细）
+[一键脚本搭建 SS 服务器教程](https://github.com/xiaoming2028/FreeNet/wiki/VPS%E4%B8%80%E9%94%AE%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BASS%E5%9B%BE%E6%96%87%E6%95%99%E7%A8%8B-Hostwinds%E6%90%AD%E5%BB%BAssr)（图文超详细）
 
 [一键脚本搭建 V2ray 服务器教程](https://github.com/xiaoming2028/kexueshangwang/wiki/%E7%BE%8E%E5%9B%BDVPS-Hostwinds%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC%E6%90%AD%E5%BB%BAV2Ray%E6%9C%80%E6%96%B0%E4%B8%AD%E6%96%87%E6%95%99%E7%A8%8B)（图文超详细，适合新手）
 
