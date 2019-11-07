@@ -158,7 +158,7 @@ chmod +x shadowsocksR.sh
 
 虽然 SSR 搭建好了，但是速度还不是很快，要搭建 BBR 才快，下面我们就说说怎么搭建 BBR。
 
-BBR 是 Google 的一款 SSR 加速产品，使用下面的命令就可以实现 BBR 加速，只有 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1216) 等少数 KVM VPS 才支持 BBR 加速，这也是我们推荐选择 Vultr 的原因。
+BBR 是 Google 的一款 SSR 加速产品，使用下面的命令就可以实现 BBR 加速，只有 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1216) 等少数 KVM VPS 才支持 BBR 加速，这也是我们推荐选择 Hostwinds 的原因。
 
 **安装 BBR：**
 
