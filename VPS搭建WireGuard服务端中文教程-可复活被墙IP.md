@@ -30,43 +30,47 @@
 ## 前提要求
 
 - **系统要求：**Debian 8 / 9、Ubuntu 14.04 / 16.04 / 18.04 / 18.10
-- **服务器要求：**OpenVZ 虚拟化的服务器不支持安装该VPN，其他虚拟化均可。这里我推荐使用Hostinger VPS主机，注册购买教程如下：
+- **服务器要求：**OpenVZ 虚拟化的服务器不支持安装该VPN，其他虚拟化均可。这里我推荐使用 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&url=1224) VPS主机，注册购买教程如下：
 
-## 购买 Hostinger VPS
+## 购买 Hostwinds VPS
 
-1、通过 [Hostinger 优惠链接进入](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=18493&aff_sub=GitHub&url_id=39) Hostinger 中文版首页，选择 “产品” 下的 " VPS主机" 。
+首先确认不要使用任何代理，网络是什么 IP 就是什么 IP ，不然可能需要人工审核，导致 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&url=1216) VPS 购买显示 "Pending" 状态， 不能即时创建服务激活。
 
-![1](https://user-images.githubusercontent.com/54033249/64271400-d4cc7780-cf6f-11e9-9730-61ae0e0c52f9.jpg)
+1、通过[ Hostwinds 优惠链接进入](https://affiliates.hostwinds.com/hostwinds.php?id=7011&url=1224)Hostwinds 首页，选择 “VPS” 下的 "Unmanaged VPS" ，这里是最便宜的**(注意千万不要选择页面上 3.29 美元那个，那个是虚拟空间，不是 VPS !!!)**。
 
-2、进入 VPS 选择页面后，根据自己的需要的配置选择套餐，一般我们选择最低配置就够用了，然后点击 “添加购物车” 按钮进入信息填写页面，如下所示：
+[![img](https://user-images.githubusercontent.com/52620310/62405902-216e0d00-b5d6-11e9-8361-a3a75797b52f.jpg)](https://user-images.githubusercontent.com/52620310/62405902-216e0d00-b5d6-11e9-8361-a3a75797b52f.jpg)
 
-![2](https://user-images.githubusercontent.com/54033249/64271407-dac25880-cf6f-11e9-9799-17415bd5fc2c.jpg)
+2、进入 VPS 选择页面后，根据自己的需要的配置选择套餐，一般我们选择最低配置就够用了，然后点击 “Order” 按钮进入信息填写页面，如下所示：
 
-3、进入购物车界面，购买时间最少一个月，第一次购买时间越长优惠力度越大，长期使用建议购买时间长点，不然后面续费就没有那么大优惠了。确认无误后，点击 “现在结账”按钮 进入下一步，如下图所示：
+[![img](https://user-images.githubusercontent.com/52620310/62405905-27fc8480-b5d6-11e9-85d3-70c4f202ef17.jpg)](https://user-images.githubusercontent.com/52620310/62405905-27fc8480-b5d6-11e9-85d3-70c4f202ef17.jpg)
 
-![3](https://user-images.githubusercontent.com/54033249/64271432-e57ced80-cf6f-11e9-951f-30518ad91c78.jpg)
+3、进入信息填写页面后首先填写账号信息，一般是新用户我们填写左边的姓、名、邮箱、密码，然后点击 “Submit” 进入下一步，如下图所示：
 
-4、进入下一页，输入你的账户信息，请确保使用有效的电子邮件地址，如下图所示：
+[![img](https://user-images.githubusercontent.com/52620310/62405907-2cc13880-b5d6-11e9-8dd3-bca5e119f97d.jpg)](https://user-images.githubusercontent.com/52620310/62405907-2cc13880-b5d6-11e9-8dd3-bca5e119f97d.jpg)
 
-![5](https://user-images.githubusercontent.com/54033249/64271445-e9a90b00-cf6f-11e9-8bb1-3ffe49bed013.jpg)
+4、页面跳转后填写用户信息，如下图所示：
 
-确认无误后，点击**创建账号并结账**按钮。
+[![img](https://user-images.githubusercontent.com/52620310/62405909-321e8300-b5d6-11e9-8efc-d25563e38ea1.jpg)](https://user-images.githubusercontent.com/52620310/62405909-321e8300-b5d6-11e9-8efc-d25563e38ea1.jpg)
 
-5、接下来，填写你的结算信息， Hostinger 目前提供多种支付方式：
+5、然后选择购买时间、数据中心 、操作系统，红色部分需要自己选择，绿色一般我们默认，可以按月购买，但是建议第一次购买时间选择长一点，这样优惠要大很多，不然后面续费优惠力度就没有这么大了。 如下图所示：
 
-![6](https://user-images.githubusercontent.com/54033249/64271451-eca3fb80-cf6f-11e9-840f-6858036fe4dd.jpg)
+[![img](https://user-images.githubusercontent.com/52620310/62405910-36e33700-b5d6-11e9-916a-21611cae95ba.jpg)](https://user-images.githubusercontent.com/52620310/62405910-36e33700-b5d6-11e9-916a-21611cae95ba.jpg)
 
-6、在这篇文章中，我们以支付宝为例，选择第二排的 Alipay 图标：
+6、默认是自动云备份的，如果不需要去掉勾选， 如下图所示：
 
-![7](https://user-images.githubusercontent.com/54033249/64271461-f168af80-cf6f-11e9-9f20-ce5d31ae9a40.jpg)
+[![img](https://user-images.githubusercontent.com/52620310/62405913-3c408180-b5d6-11e9-908d-d475887eda70.jpg)](https://user-images.githubusercontent.com/52620310/62405913-3c408180-b5d6-11e9-908d-d475887eda70.jpg)
 
-7、点击 **Continue** 按钮，浏览器会打开支付宝结算窗口，扫码付款之后，订单就完成了。
+7、然后选择付款方式，一般我们选择支付宝进行付款 （只有国内 IP 访问的时候才有支付宝付款方式），如下图所示：
 
-这时候，你应该会收到 3 封电子邮件，其中一封是邮箱验证，为了避免以后可能遇到的麻烦，请点击邮件中的 **Verify my email** 按钮以激活账户：
+[![img](https://user-images.githubusercontent.com/52620310/62405915-406c9f00-b5d6-11e9-90d8-7eed10538637.jpg)](https://user-images.githubusercontent.com/52620310/62405915-406c9f00-b5d6-11e9-90d8-7eed10538637.jpg)
 
-![8](https://user-images.githubusercontent.com/54033249/64271481-f4fc3680-cf6f-11e9-8989-466e88477be0.jpg)
+8、最后确认价格（不同时期可能价格有些许不同，如果通过前面优惠链接点击购买会有优惠），勾选同意协议，然后点击“Complete Order”按钮进行下单， 如下图所示：
 
+[![img](https://user-images.githubusercontent.com/52620310/62405916-4498bc80-b5d6-11e9-8ecd-77d1f9587e94.jpg)](https://user-images.githubusercontent.com/52620310/62405916-4498bc80-b5d6-11e9-8ecd-77d1f9587e94.jpg)
 
+9、下单完成后订单结果如下图所示：
+
+![img](https://user-images.githubusercontent.com/52620310/62405918-482c4380-b5d6-11e9-970d-4fce99d5d1e6.jpg)
 
 
 
@@ -317,7 +321,7 @@ systemctl disable wg-quick@wg0
 
 ## 总结
 
-以上就是 Hostinger 一键搭建 WireGuard 的教程，通过该教程可以轻松实现 hostinger 搭建 WireGuard，希望可以帮助需要使用 Hostinger VPS 搭建 WireGuard 的朋友。
+以上就是 Hostwinds 一键搭建 WireGuard 的教程，通过该教程可以轻松实现 Hostwinds 搭建 WireGuard，希望可以帮助需要使用 Hostwinds VPS 搭建 WireGuard 的朋友。
 
-[**Hostinger 最快VPS低至3.95美元/月**](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=18493&aff_sub=GitHub&url_id=39)，有中文界面，支持支付宝、微信付款，欢迎购买注册。
+[Hostwinds 最好美国VPS低至4.49美元/月](https://affiliates.hostwinds.com/hostwinds.php?id=7011&url=1216)，支持支付宝付款，欢迎购买注册。
 
