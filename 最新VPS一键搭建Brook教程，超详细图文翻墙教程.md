@@ -12,7 +12,7 @@ Brook 是一款新兴的代理软件，其版本横垮 Windows、安卓、iOS、
 >
 > 3、一键部署Brook服务
 >
-> 4、一键加速VPS服务器
+
 
 
 
@@ -116,48 +116,6 @@ chmod +x brook.sh
 
 ![4](https://user-images.githubusercontent.com/52620310/62551742-1c8fae80-b89f-11e9-80ed-13018f549a89.png)
 
-
-
-## 4、一键加速VPS服务器
-
-BBR 是 Google 的一款 VPS 加速产品，使用下面的命令就可以实现 BBR 加速，只有 [Hostinger](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=18493&aff_sub=GitHub&url_id=39) 等少数 KVM VPS 才支持 BBR 加速，这也是我们推荐选择 Vultr 的原因。
-
-在 xShell 连接端输入，如下命令，然后回车：
-
-```
-yum -y install wget
-wget –no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
-chmod +x bbr.sh
-./bbr.sh
-```
-
-[![img](https://user-images.githubusercontent.com/52620310/62406006-18317000-b5d7-11e9-8146-b9b05d4240d7.jpg)](https://user-images.githubusercontent.com/52620310/62406006-18317000-b5d7-11e9-8146-b9b05d4240d7.jpg)
-
-然后按任意键进行部署
-
-[![img](https://user-images.githubusercontent.com/52620310/62406007-1c5d8d80-b5d7-11e9-822f-fd9ed195a88b.jpg)](https://user-images.githubusercontent.com/52620310/62406007-1c5d8d80-b5d7-11e9-822f-fd9ed195a88b.jpg)
-
-然后需要等待命令执行，大约5分钟，如下图所示：
-
-[![img](https://user-images.githubusercontent.com/52620310/62406009-22536e80-b5d7-11e9-826b-e1f1b0774db9.jpg)](https://user-images.githubusercontent.com/52620310/62406009-22536e80-b5d7-11e9-826b-e1f1b0774db9.jpg)
-
-会在下面的图片过程中等待一会儿
-
-[![img](https://user-images.githubusercontent.com/52620310/62406011-267f8c00-b5d7-11e9-8ac1-67599ff1facb.jpg)](https://user-images.githubusercontent.com/52620310/62406011-267f8c00-b5d7-11e9-8ac1-67599ff1facb.jpg)
-
-最后完成后需要重启，根据提示输入：y，重启服务器即可生效
-
-[![img](https://user-images.githubusercontent.com/52620310/62406015-2bdcd680-b5d7-11e9-9aec-fdf762a5f191.jpg)](https://user-images.githubusercontent.com/52620310/62406015-2bdcd680-b5d7-11e9-9aec-fdf762a5f191.jpg)
-
-如果错过了重启步骤，直接输入重启命令命令：
-
-```
-reboot
-```
-
-[![img](https://user-images.githubusercontent.com/52620310/62406018-31d2b780-b5d7-11e9-819b-baa65e585c47.jpg)](https://user-images.githubusercontent.com/52620310/62406018-31d2b780-b5d7-11e9-819b-baa65e585c47.jpg)
-
-然后耐心等待，待服务器重启后即可自动开启 VPS 加速。
 
 
 
