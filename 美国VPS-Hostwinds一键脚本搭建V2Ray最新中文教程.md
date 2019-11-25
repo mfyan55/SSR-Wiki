@@ -26,6 +26,8 @@ V2Ray是在Shadowsocks的作者被请喝茶之后出现的一个开源项目，�
 
 ## 2、美国VPS Hostwinds 购买
 
+[**Hostwinds**](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1216) 是一家美国主机商，成立于 2010 年，国内站长使用较多的是 Hostwinds 美国 VPS 主机产品。由于 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1224) 美国 VPS 主机采用的是 SSD 硬盘，而且所有方案都有全球 CDN 加速功能，因而也备受用户青睐。 如今 Hostwinds 主机商提供的产品方案也非常丰富，包括虚拟主机、云主机、VPS主机以及独立主机等。目前 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1216) 主要有达拉斯、西雅图 2 个数据中心，其中西雅图数据中心在国内访问速度最快。现在 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1224) 提供免费更换IP了，没错，就是免费，免费，随意更换，可以一键解决 IP 被墙的问题了。通过 Hostwinds 搭建 V2ray 是不错的选择，今天就讲解下 Hostwinds 搭建 V2ray 教程。
+
 首先确认不要使用任何代理，网络是什么 IP 就是什么 IP ，不然可能需要人工审核，导致 Hostwinds VPS 购买显示 "Pending" 状态， 不能即时创建服务激活。
 
 1、通过[ Hostwinds 优惠链接进入](https://affiliates.hostwinds.com/hostwinds.php?id=7011&url=1224)Hostwinds 首页，选择 “VPS” 下的 "Unmanaged VPS" ，这里是最便宜的**(注意千万不要选择页面上 3.29 美元那个，那个是虚拟空间，不是 VPS !!!)**。
@@ -46,7 +48,7 @@ V2Ray是在Shadowsocks的作者被请喝茶之后出现的一个开源项目，�
 
 5、然后选择购买时间、数据中心 、操作系统，红色部分需要自己选择，绿色一般我们默认，可以按月购买，但是建议第一次购买时间选择长一点，这样优惠要大很多，不然后面续费优惠力度就没有这么大了。 如下图所示：
 
-[![img](https://user-images.githubusercontent.com/52620310/62405910-36e33700-b5d6-11e9-916a-21611cae95ba.jpg)](https://user-images.githubusercontent.com/52620310/62405910-36e33700-b5d6-11e9-916a-21611cae95ba.jpg)
+![10](https://user-images.githubusercontent.com/54033249/69518735-40344d00-0f93-11ea-9019-bdb48ea5b4f1.jpg)
 
 6、默认是自动云备份的，如果不需要去掉勾选， 如下图所示：
 
@@ -98,66 +100,62 @@ Xshell 下载地址：<https://pan.baidu.com/s/1v7RCM0IjZGn_q5aWS1WXWg>，提取
 
 在上图的待输入内容处，粘贴下面的命令（复制下面的命令，然后在 Xshell 待输入内容处“鼠标右键”/“粘贴”即可）：
 
-```
-# 安装wget
-sudo yum -y install wget
-# 下载脚本
-wget https://install.direct/go.sh
-# 安装unzip
-sudo yum install zip unzip 
-# 执行安装
-sudo bash go.sh 
-Installing V2Ray v3.14 on x86_64
-Downloading V2Ray.
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100   608    0   608    0     0   2229      0 --:--:-- --:--:-- --:--:--  2235
-100 8482k  100 8482k    0     0  2501k      0  0:00:03  0:00:03 --:--:-- 2813k
-Extracting V2Ray package to /tmp/v2ray.
-Archive:  /tmp/v2ray/v2ray.zip
-   creating: /tmp/v2ray/v2ray-v3.14-linux-64/
-  inflating: /tmp/v2ray/v2ray-v3.14-linux-64/geoip.dat  
-  inflating: /tmp/v2ray/v2ray-v3.14-linux-64/geosite.dat  
-  inflating: /tmp/v2ray/v2ray-v3.14-linux-64/readme.md  
-   creating: /tmp/v2ray/v2ray-v3.14-linux-64/systemd/
-  inflating: /tmp/v2ray/v2ray-v3.14-linux-64/systemd/v2ray.service  
-   creating: /tmp/v2ray/v2ray-v3.14-linux-64/systemv/
-  inflating: /tmp/v2ray/v2ray-v3.14-linux-64/systemv/v2ray  
-  inflating: /tmp/v2ray/v2ray-v3.14-linux-64/v2ctl  
- extracting: /tmp/v2ray/v2ray-v3.14-linux-64/v2ctl.sig  
-  inflating: /tmp/v2ray/v2ray-v3.14-linux-64/v2ray  
- extracting: /tmp/v2ray/v2ray-v3.14-linux-64/v2ray.sig  
-  inflating: /tmp/v2ray/v2ray-v3.14-linux-64/vpoint_socks_vmess.json  
-  inflating: /tmp/v2ray/v2ray-v3.14-linux-64/vpoint_vmess_freedom.json  
-PORT:13437
-UUID:f500ecf5-e135-49c6-9ce2-78eb490d0aa9
-Created symlink from /etc/systemd/system/multi-user.target.wants/v2ray.service to /etc/systemd/system/v2ray.service.
-V2Ray v3.14 is installed.
-```
-
-在首次安装完成之后，V2Ray 不会自动启动，需要手动运行上述启动命令。而在已经运行 V2Ray 的 VPS 上再次执行安装脚本，安装脚本会自动停止 V2Ray 进程，升级 V2Ray 程序，然后自动运行 V2Ray。在升级过程中，配置文件不会被修改。
+在上图的待输入内容处，粘贴下面的命令（复制下面的命令，然后在 Xshell 待输入内容处“鼠标右键”/“粘贴”即可）：
 
 ```
-## 启动
-sudo systemctl start v2ray
-
-## 停止
-sudo systemctl stop v2ray
-
-## 重启
-sudo systemctl restart v2ray
+bash <(curl -s -L https://git.io/v2ray.sh)
 ```
 
-**配置**
+> 如果提示 curl: command not found ，那是因为你的 VPS 没装 Curl
+> ubuntu/debian 系统安装 Curl 方法: `apt-get update -y && apt-get install curl -y`
+> centos 系统安装 Curl 方法: `yum update -y && yum install curl -y`
+> 安装好 curl 之后就能安装脚本了
 
-如果你按照上面的命令执行安装完成之后，服务端其实是不需要再进行任何配置的，配置文件位于`/etc/v2ray/config.json`，使用`cat /etc/v2ray/config.json`查看配置信息。接下来进行客户端配置就行了。
+然后选择安装，即是输入 1 回车
 
-**说明：**
+选择传输协议，如果没有特别的需求，使用默认的 TCP 传输协议即可，直接回车
 
-- 配置文件中的 id、端口、alterId 需要和客户端的配置保持一致；
-- 服务端使用脚本安装成功之后默认就是 vmess 协议；
+选择端口，如果没有特别的需求，使用默认的端口即可，直接回车
 
-配置完成之后重启 V2ray。
+是否屏蔽广告，除非你真的需要，一般来说，直接回车即可
+
+![Hostwinds搭建V2Ray](https://user-images.githubusercontent.com/54033249/69517809-c4390580-0f90-11ea-882c-89af39012d0a.jpg)
+
+是否配置 Shadowsocks ，如果不需要就直接回车，否则就输入 Y 回车
+
+Shadowsocks 端口，密码，加密方式这些东西自己看情况配置即可，我个人当然是全部直接回车
+
+OK，按回车继续
+
+![Hostwinds一键搭建V2Ray](https://user-images.githubusercontent.com/54033249/69517812-c733f600-0f90-11ea-9c54-d81bafa1df6b.jpg)
+
+安装信息，如果确保没有什么问题了，按回车继续
+
+![VPS一键搭建V2Ray](https://user-images.githubusercontent.com/54033249/69517815-c9965000-0f90-11ea-88b3-4c2af3c901fa.jpg)
+
+OK，出现这个界面就表示 V2Ray 已经安装完成了。
+
+![VPS如何一键搭建V2Ray](https://user-images.githubusercontent.com/54033249/69519058-14659700-0f94-11ea-90a8-3596c8c8d58e.jpg)
+
+如上图所示，V2Ray 配置信息，Shadowsocks 配置信息都有了
+
+如果你使用过 Shadowsocks ，那么现在你可以测试一下 Shadowsocks 配置了，看看是否能正常使用。
+
+如果你使用过 V2Ray 某些客户端，那么现在也可以测试一下配置了。
+
+(备注，可能某些 V2Ray 客户端的选项或描述略有不同，但事实上，上面的 V2Ray 配置信息已经足够详细，由于客户端的不同，请对号入座。)
+
+### 优化 V2Ray
+
+由于本人的脚本在 Debian9 系统会自动开启 BBR 优化加速了，所以不需要再安装 BBR 优化了，如果你是使用其他商家的 VPS 并且是按照此教程流程来安装 V2Ray 的话，那么你可以输入 
+
+```
+v2ray bbr
+```
+
+回车，然后选择安装 BBR 或者 锐速 来优化 V2Ray
+
+只是还想再啰嗦一下，如果你是使用国际大厂的 VPS，并且是按照此教程流程来安装 V2Ray 的话，请自行在安全组 (防火墙) 开放端口和 UDP 协议 (如果你要使用含有 mKCP 的传输协议)
 
 ## 5、客户端配置
 
@@ -183,6 +181,6 @@ sudo systemctl restart v2ray
 
 ## 6、Hostwinds 搭建 V2Ray 总结
 
-以上就是美国 VPS Hostwinds 搭建 V2Ray 的教程，通过教可以轻松实现 Hostwinds 搭建 V2Ray，希望可以帮助需要使用 Hostwinds 搭建 V2Ray 的朋友。
+以上就是美国 VPS [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&url=1216) 搭建 V2Ray 的教程，通过教可以轻松实现 Hostwinds 搭建 V2Ray，希望可以帮助需要使用 Hostwinds 搭建 V2Ray 的朋友。
 
 [Hostwinds 最好美国VPS低至4.49美元/月](https://affiliates.hostwinds.com/hostwinds.php?id=7011&url=1216)，支持支付宝付款，欢迎购买注册。
