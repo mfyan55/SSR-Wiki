@@ -18,6 +18,8 @@ Brook 是一款新兴的代理软件，其版本横垮 Windows、安卓、iOS、
 
 ## 1、购买 Hostinger VPS
 
+[Hostinger](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=18493&aff_sub=GitHub&url_id=39) 成立于 2004 年 11 月，在美国、亚洲和欧洲都设有机房，骨干网络采用1000Mbps宽带连接，这可以大幅提升你的访问速度。目前为 178 个国家和地区的超过 3000 万名客户提供服务。[Hostinger](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=18493&aff_sub=GitHub&url_id=39) 的承诺是创建一个易于使用、稳定可靠，适合于开发人员的网络托管服务，并且以所有人都能接受的价格提供一流的功能和安全性，以及快速、优质的客户服务。[Hostinger](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=18493&aff_sub=GitHub&url_id=39) 为了开拓中国市场，推出了 [中文版](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=18493&aff_sub=GitHub&url_id=39) 网站，并且接受支付宝、微信、银联等本地付款方式。
+
 1、通过 [Hostinger 优惠链接进入](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=18493&aff_sub=GitHub&url_id=39) Hostinger 中文版首页，选择 “产品” 下的 " VPS主机" 。
 
 ![1](https://user-images.githubusercontent.com/54033249/64271400-d4cc7780-cf6f-11e9-9730-61ae0e0c52f9.jpg)
