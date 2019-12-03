@@ -36,6 +36,10 @@
 通过 [**本优惠链接进入**](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=18493&aff_sub=GitHub&url_id=39) Hostinger 首页可以获得 4.8 折优惠。
 
 
+## ===VPS速度测评===
+
+[Hostwinds、Hostinger、Vultr、搬瓦工速度对比测评](https://github.com/xiaoming2028/FreeNet/wiki/Hostwinds%E3%80%81%E6%90%AC%E7%93%A6%E5%B7%A5%E3%80%81Hostinger%E3%80%81vutlr-%E5%9B%9B%E5%AE%B6VPS%E4%B8%BB%E6%9C%BA%E5%95%86%E9%80%9F%E5%BA%A6%E5%AF%B9%E6%AF%94%E6%B5%8B%E8%AF%84)
+
 
 ## ===免费SS/SSR节点列表===（不定期更新账号ip或端口或密码）
 
