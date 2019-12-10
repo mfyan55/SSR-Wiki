@@ -121,7 +121,7 @@ shadowsocks 正常工作需要服务器端和客户端两端合作实现，首�
 
 ## 2、SSH 连接 Hostwinds
 
-首先你需要通过 SSH 连接 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1216) 的 Linux VPS，连接 Linux VPS 需要使用 SSH 工具，这里推荐使用 Xshell 可以复制粘贴命令，Xshell 本身是需要付款的，作为中国人当然是使用 XX 版了，这里提供下载包如下所示：
+首先你需要通过 SSH 连接 [搬瓦工](https://bandwagonhost.com/aff.php?aff=54381) 的 Linux VPS，连接 Linux VPS 需要使用 SSH 工具，这里推荐使用 Xshell 可以复制粘贴命令，Xshell 本身是需要付款的，作为中国人当然是使用 XX 版了，这里提供下载包如下所示：
 
 Xshell 下载地址：<https://pan.baidu.com/s/1v7RCM0IjZGn_q5aWS1WXWg>，提取码: q3jw
 
@@ -149,73 +149,7 @@ Xshell 下载地址：<https://pan.baidu.com/s/1v7RCM0IjZGn_q5aWS1WXWg>，提取
 
 [![img](https://user-images.githubusercontent.com/52620310/62405930-64c87b80-b5d6-11e9-9f01-3a5ab54e1dda.jpg)](https://user-images.githubusercontent.com/52620310/62405930-64c87b80-b5d6-11e9-9f01-3a5ab54e1dda.jpg)
 
-**注意：**如果出现 Hostwinds 无法登录的情况，请参考以下解决办法：
-
-#### 密码不对导致 Hostwinds VPS 连接不上
-
-如果只是密码不对，显示 SSH 服务器拒绝了密码，如下图使用 Xshell 连接的显示示意图：
-
-[![img](https://user-images.githubusercontent.com/52620310/62405932-698d2f80-b5d6-11e9-8c51-cd82d4997871.jpg)](https://user-images.githubusercontent.com/52620310/62405932-698d2f80-b5d6-11e9-8c51-cd82d4997871.jpg)
-
-Hostwinds 采用 KVM，因此生成 Linux VPS 的密码的自动生成的，而 Hostwinds 发送的邮件中的密码可能不是VPS真实的密码，这时不知道密码是多少我们可以登录后台重新设置密码，步骤如下：
-
-1、访问 <https://clients.hostwinds.com/clientarea.php>，点击你的 Service，如下图所示：
-
-[![img](https://user-images.githubusercontent.com/52620310/62405941-86296780-b5d6-11e9-8a92-50bdf3d4091b.jpg)](https://user-images.githubusercontent.com/52620310/62405941-86296780-b5d6-11e9-8a92-50bdf3d4091b.jpg)
-
-2、然后点击管理按钮，到管理界面，如下图所示：
-
-[![img](https://user-images.githubusercontent.com/52620310/62405942-8aee1b80-b5d6-11e9-82ba-16510e9012a2.jpg)](https://user-images.githubusercontent.com/52620310/62405942-8aee1b80-b5d6-11e9-82ba-16510e9012a2.jpg)
-
-3、然后点击修改密码按钮，在弹出框中重新输入密码，密码需要字母大小写、特殊符还有要一定长度：
-
-[![img](https://user-images.githubusercontent.com/52620310/62405944-904b6600-b5d6-11e9-8d74-58896156e07b.jpg)](https://user-images.githubusercontent.com/52620310/62405944-904b6600-b5d6-11e9-8d74-58896156e07b.jpg)
-
-4、修改后密码还没有生效，最关键的一步需要 重启服务器，才能生效，如下图所示点击重启：
-
-[![img](https://user-images.githubusercontent.com/52620310/62405946-95a8b080-b5d6-11e9-80ea-e97308a31053.jpg)](https://user-images.githubusercontent.com/52620310/62405946-95a8b080-b5d6-11e9-80ea-e97308a31053.jpg)
-
-这样就能够使用你就可以使用你设置的密码登录 Hostwinds VPS 了。
-
-#### 如果是国内屏蔽导致 Hostwinds VPS 连接不上
-
-我们都众所周知由于大陆的一些原因，国外 VPS 的 IP 是经常会被禁止的，如果被大陆屏蔽了，这种情况表现为可以 ping 通 IP，但是 SSH 连接不上。Hostwind VPS 是支持更换 IP。你可以通过 “Fix ISP Block” 功能来修复 IP，这个操作会自动修改 IP，具体操作我们具体看下。
-
-打开 [Hostwinds 的官网](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1224)，进入 Hostwinds 的后台控制面板：
-
-[![img](https://user-images.githubusercontent.com/52620310/62405947-9b9e9180-b5d6-11e9-987e-a6a120eeacf2.jpg)](https://user-images.githubusercontent.com/52620310/62405947-9b9e9180-b5d6-11e9-987e-a6a120eeacf2.jpg)
-
-然后输入用户名、密码登录
-
-[![img](https://user-images.githubusercontent.com/52620310/62405949-a0634580-b5d6-11e9-96ea-4721c7d34d6c.jpg)](https://user-images.githubusercontent.com/52620310/62405949-a0634580-b5d6-11e9-96ea-4721c7d34d6c.jpg)
-
-选择需要换 IP 的 VPS，点击绿色 “Manage” 按钮
-
-[![img](https://user-images.githubusercontent.com/52620310/62405950-a6f1bd00-b5d6-11e9-93f5-05364f558811.jpg)](https://user-images.githubusercontent.com/52620310/62405950-a6f1bd00-b5d6-11e9-93f5-05364f558811.jpg)
-
-然后点击 “Click Here to Manage This Server” 的按钮
-
-[![img](https://user-images.githubusercontent.com/52620310/62405955-ac4f0780-b5d6-11e9-9fd7-7ba7fb1df86f.jpg)](https://user-images.githubusercontent.com/52620310/62405955-ac4f0780-b5d6-11e9-9fd7-7ba7fb1df86f.jpg)
-
-点击 “Manage IPs” 按钮进行管理
-
-[![img](https://user-images.githubusercontent.com/52620310/62405957-b113bb80-b5d6-11e9-9797-944039bc9af0.jpg)](https://user-images.githubusercontent.com/52620310/62405957-b113bb80-b5d6-11e9-9797-944039bc9af0.jpg)
-
-然后点击 “Fix ISP Block” 按钮进行 IP 修复，如下图所示：
-
-[![img](https://user-images.githubusercontent.com/52620310/62405960-b5d86f80-b5d6-11e9-98eb-3cc0ba9b076f.jpg)](https://user-images.githubusercontent.com/52620310/62405960-b5d86f80-b5d6-11e9-98eb-3cc0ba9b076f.jpg)
-
-然后点击 “Confirm” 按钮确认
-
-[![img](https://user-images.githubusercontent.com/52620310/62405961-bb35ba00-b5d6-11e9-9d6d-d9a91bc73f98.jpg)](https://user-images.githubusercontent.com/52620310/62405961-bb35ba00-b5d6-11e9-9d6d-d9a91bc73f98.jpg)
-
-然后 Hostwinds VPS 的 IP 就会自动更换了，然后注意还需要**重装系统**才行，重装系统如下图所示：
-
-[![img](https://user-images.githubusercontent.com/52620310/62405969-c0930480-b5d6-11e9-9685-9e4eb8f21672.jpg)](https://user-images.githubusercontent.com/52620310/62405969-c0930480-b5d6-11e9-9685-9e4eb8f21672.jpg)
-
-通过上面的方法就可以解决IP被屏蔽不能访问的问题了。
-
-## 3、Hostwinds 安装 SSR 开始
+## 3、搬瓦工 安装 SSR 开始
 
 在上图的待输入内容处，粘贴下面的命令（复制下面的命令，然后在 Xshell 待输入内容处“鼠标右键”/“粘贴”即可）：
 
@@ -282,11 +216,11 @@ wget -N –no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/do
 
 按照上面的图片就可以看到设置的 SSR 账号信息，包括 IP、端口、密码、加密方式、协议插件、混淆插件，这些信息都需要填入对应的 SSR 客户端。
 
-## 4、Hostwinds 搭建 BBR 加速
+## 4、搬瓦工 搭建 BBR 加速
 
 虽然 SSR 搭建好了，但是速度还不是很快，要搭建 BBR 才快，下面我们就说说怎么搭建 BBR。
 
-BBR 是 Google 的一款 SSR 加速产品，使用下面的命令就可以实现 BBR 加速，只有 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1216) 等少数 KVM VPS 才支持 BBR 加速，这也是我们推荐选择 Hostwinds 的原因。
+BBR 是 Google 的一款 SSR 加速产品，使用下面的命令就可以实现 BBR 加速，只有 [搬瓦工](https://bwh88.net/aff.php?aff=54381&pid=57) 等少数 KVM VPS 才支持 BBR 加速，这也是我们推荐选择 搬瓦工 的原因。
 
 在 xShell 连接端输入，如下命令，然后回车：
 
@@ -323,7 +257,7 @@ reboot
 
 [![img](https://user-images.githubusercontent.com/52620310/62406018-31d2b780-b5d7-11e9-819b-baa65e585c47.jpg)](https://user-images.githubusercontent.com/52620310/62406018-31d2b780-b5d7-11e9-819b-baa65e585c47.jpg)
 
-然后耐心等待，待服务器重启后即可自动开启 SSR 加速。(这里注意如果是 centos 7 系统重启后可能防火墙阻止了 SSR，需要关闭防火墙，如果是 centos 6 就不会有这个问题，所以我们建议使用的是 Hostwinds 的 centos 6 操作系统。)
+然后耐心等待，待服务器重启后即可自动开启 SSR 加速。
 
 
 
@@ -343,8 +277,8 @@ OK！一键脚本搭建shadowsocksR完毕！科学上网吧，兄弟！
 
 
 
-## 6、Hostwinds 搭建 SSR 总结
+## 6、搬瓦工 搭建 SSR 总结
 
-以上就是美国 VPS Hostwinds 搭建 SSR 的教程，通过教可以轻松实现 Hostwinds 搭建 SSR，希望可以帮助需要使用 Hostwinds 搭建 SSR 的朋友。
+以上就是美国 VPS 搬瓦工搭建 SSR 的教程，通过教可以轻松实现搬瓦工搭建 SSR，希望可以帮助需要使用搬瓦工搭建 SSR 的朋友。
 
-[Hostwinds 最好美国VPS低至4.49美元/月](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1216)，支持支付宝付款，欢迎购买注册。
+[搬瓦工最好美国VPS](https://bwh88.net/aff.php?aff=54381&pid=57)，支持支付宝付款，欢迎购买注册。
