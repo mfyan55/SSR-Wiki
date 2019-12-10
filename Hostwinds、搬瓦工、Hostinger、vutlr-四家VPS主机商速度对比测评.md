@@ -14,8 +14,11 @@
 **综合性价比：[Hostinger](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=18493&aff_sub=GitHub&url_id=39) > [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1224) > [搬瓦工](https://bwh88.net/aff.php?aff=54381&pid=94) > [Vultr](https://www.vultr.com/?ref=8169047)**
 
 无责任结论如下，四家 VPS 分别适合以下三类用户使用。
+
 需求全球多个节点的，能看4K视频的购买 [Vultr](https://www.vultr.com/?ref=8169047)、[Hostinger](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=18493&aff_sub=GitHub&url_id=39)
+
 要求打开网页速度快，能看4K视频的购买 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1224) 、[搬瓦工](https://bwh88.net/aff.php?aff=54381&pid=94)
+
 要求速度快和稳定的选 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1224) （关键是现在可以免费更换IP）
 
 [Vultr](https://www.vultr.com/?ref=8169047)：5美元一月的日本节点，Youtube 的速度。
