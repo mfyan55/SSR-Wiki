@@ -1,6 +1,6 @@
 ## 一、Just My Socks 介绍
 
-[Just My Socks官网](https://justmysocks1.net/members/aff.php?aff=4355)
+[Just My Socks官网](https://justmysocks2.net/members/aff.php?aff=4355)
 
 Just My Socks 是搬瓦工官方出品的 ss 加速器，品质有保障！！！最低价格 $2.88 一个月，每月流量 100GB，提供多个域名供连接，并且保证可用，IP被封自动更换IP，不需要任何操作，也不需要其它费用。全部都是美西 CN2 GIA 线路，速度很快很稳定。现在 Just My Socks 已支持**支付宝**支付
 
@@ -23,7 +23,7 @@ Just My Socks 是搬瓦工官方出品的 ss 加速器，品质有保障！！�
 
 ## 二、Just My Socks 注册
 
-点击打开 [**Just My Socks 官网**](https://justmysocks1.net/members/aff.php?aff=4355)
+点击打开 [**Just My Socks 官网**](https://justmysocks2.net/members/aff.php?aff=4355)
 
 先选择语言为中文，然后点击 **Browse ALL**
 
@@ -45,7 +45,7 @@ Just My Socks 是搬瓦工官方出品的 ss 加速器，品质有保障！！�
 
  
 
-输入 **[Just My Socks 优惠码](https://justmysocks1.net/members/aff.php?aff=4355)** （**JMS9272283**） 点击检验代码   可享受 5.2% 的折扣
+输入 **[Just My Socks 优惠码](https://justmysocks2.net/members/aff.php?aff=4355)** （**JMS9272283**） 点击检验代码   可享受 5.2% 的折扣
 
 ![5](https://user-images.githubusercontent.com/54033249/64538484-4d0bb200-d34f-11e9-854c-4defc8407266.png)
 
