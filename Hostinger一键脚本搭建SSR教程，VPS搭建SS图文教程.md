@@ -89,67 +89,57 @@ Xshell 下载地址：<https://pan.baidu.com/s/1v7RCM0IjZGn_q5aWS1WXWg>，提取
 在上图的待输入内容处，粘贴下面的命令（复制下面的命令，然后在 Xshell 待输入内容处“鼠标右键”/“粘贴”即可）：
 
 ```
-yum -y install wget
-wget -N –no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh && chmod +x ssr.sh && bash ssr.sh
+wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
+chmod +x shadowsocks-all.sh
+./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
 ```
 
-粘贴后会下载相关安装包，等待屏幕不动的时候按“回车键”，如下图所示：
+（提示：如果运行上面第一条命令时，出现找不到wget之类的提示，则表明系统没有预装wget，先运行以下命令完成wget的安装）
 
-![29](https://user-images.githubusercontent.com/54033249/64271572-1eb55d80-cf70-11e9-8092-0b91f14f4bf2.jpg)
+```
+CentOS：
+yum -y install wget
+Ubuntu/Debian：
+apt-get -y install wget
+```
 
-然后等待一会儿，出现 SSR 安装的引导界面，输入数字1，按回车键进行 SSR 安装，如下图所示：
+3.接下来会有几个参数需要选择，依次为：
 
-![30](https://user-images.githubusercontent.com/54033249/64271577-22e17b00-cf70-11e9-88c4-600396c1fa37.jpg)
+- 1.出现 SSR 安装的引导界面，输入数字2，按回车键进行 SSR 安装，如下图所示：
 
-然后输入端口，尽量选择一个比较大的数字，避免端口冲突，建议选择 8099，经验证 8080、8090 端口是被封了的，千万不要用这个（如果后面遇到可以登录 VPS，但是 ssr 上不了网，可能就是端口封了，修改一下 ssr 端口就可以了）， 然后回车，如下图所示：
+![](https://img2018.cnblogs.com/blog/1765496/202002/1765496-20200219170444298-1781403471.jpg)
 
-![31](https://user-images.githubusercontent.com/54033249/64271587-26750200-cf70-11e9-8c43-593fe028800a.jpg)
+- 2.然后会提示设置SSR密码，输入自定义密码后按回车，建议不要使用默认密码。
 
-然后输入 SSR 账号的密码，随便输入一个密码，这里输入123qweasd，然后回车，如下图所示：
+![](https://img2018.cnblogs.com/blog/1765496/202002/1765496-20200219170459564-483295482.jpg)
 
-![32](https://user-images.githubusercontent.com/54033249/64271596-296ff280-cf70-11e9-87ea-6899162c0f9f.jpg)
+- 3.接下来选择SSR要使用的服务器端口，尽量选择一个比较大的数字，避免端口冲突，建议选择 8099，经验证 8080、8090 端口是被封了的，千万不要用这个（如果后面遇到可以登录 VPS，但是 ssr 上不了网，可能就是端口封了，修改一下 ssr 端口就可以了）， 然后回车，如下图所示：
 
-然后输入 SSR 账号的加密方式，随便输入 10，选择 aes-256-cfb 的加密方式，然后回车，如下图所示：
+![](https://img2018.cnblogs.com/blog/1765496/202002/1765496-20200219170505895-1680287078.jpg)
 
-![33](https://user-images.githubusercontent.com/54033249/64271607-2d037980-cf70-11e9-8cee-0fcabee94a9a.jpg)
+- 4.然后选择加密方式，如果选择chacha20的话，就输入对应序号12，按回车继续。
 
-然后输入 SSR 账号的协议插件，随便输入 2，选择 auth_sha1_v4 的协议插件，然后回车，如下图所示：
+![](https://img2018.cnblogs.com/blog/1765496/202002/1765496-20200219170514488-1849603840.jpg)
 
-![34](https://user-images.githubusercontent.com/54033249/64271617-312f9700-cf70-11e9-8786-48dad7b0ad73.jpg)
+- 5.接下来选择协议，建议选择自auth_aes128_md5开始以下的几种，输入对应序号按回车。
 
-然后选择是否设置协议插件兼容原版，随便输入 y，表示要设置，然后回车，如下图所示：
+![](https://img2018.cnblogs.com/blog/1765496/202002/1765496-20200219170543807-1693020693.jpg)
 
-![35](https://user-images.githubusercontent.com/54033249/64271622-34c31e00-cf70-11e9-8a60-81ddda87ad3d.jpg)
+- 6.然后选择混淆方式，如下图所示，选择好后按回车。
 
-然后选择混淆插件，这里选择 1，然后回车，如下图所示：
+![](https://img2018.cnblogs.com/blog/1765496/202002/1765496-20200219170553509-1844501351.jpg)
 
-![36](https://user-images.githubusercontent.com/54033249/64271629-3987d200-cf70-11e9-8324-648ddbb2dff6.jpg)
+- 7.以上参数选择完成后，按任意键开始安装。
 
-然后设置限制的设备数，如果要限制就输入对于的数字，如果不限制就直接回车，如下图所示：
+![](https://img2018.cnblogs.com/blog/1765496/202002/1765496-20200219170557621-2142405219.jpg)
 
-![37](https://user-images.githubusercontent.com/54033249/64271637-3ee51c80-cf70-11e9-8552-01424a8dc337.jpg)
+- 8.安装完成后，会有如下图安装成功的提示。
 
-然后设置每个端口的速度，如果要限制就输入对于的数字，单位是 KB/S，如果不限制就直接回车，建议不限制速度，如下图所示：
-
-![38](https://user-images.githubusercontent.com/54033249/64271640-41477680-cf70-11e9-9d89-6e91dd6d60ed.jpg)
-
-然后设置总的速度，如果要限制就输入对于的数字，单位是 KB/S，如果不限制就直接回车，建议不限制速度，如下图所示：
-
-![39](https://user-images.githubusercontent.com/54033249/64271646-44dafd80-cf70-11e9-93b8-e91943a3b99a.jpg)
-
-然后会开始部署，到下图所示的位置，提示你下载文件，输入：y
-
-![40](https://user-images.githubusercontent.com/54033249/64271658-499fb180-cf70-11e9-97a7-6eef694fca70.jpg)
-
-然后就耐心等待一会儿安装，如下图所示：
-
-![41](https://user-images.githubusercontent.com/54033249/64271666-4d333880-cf70-11e9-9016-fba551615b68.jpg)
-
-等安装完成之后就可以看到 SSR 账号 配置信息，如下图所示：
-
-![42](https://user-images.githubusercontent.com/54033249/64271671-502e2900-cf70-11e9-9451-42509848771a.jpg)
+![](https://img2018.cnblogs.com/blog/1765496/202002/1765496-20200219170559370-1432378159.jpg)
 
 按照上面的图片就可以看到设置的 SSR 账号信息，包括 IP、端口、密码、加密方式、协议插件、混淆插件，这些信息都需要填入对应的 SSR 客户端。
+
+- 9.经过以上几个简单的参数选择后，SSR服务器端已经自动安装成功了。保险起见，输入reboot重启VPS服务器，SSR会自动随系统重启。
 
 
 
