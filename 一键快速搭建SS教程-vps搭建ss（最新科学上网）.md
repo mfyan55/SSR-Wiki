@@ -10,57 +10,118 @@ shadowsocks 正常工作需要服务器端和客户端两端合作实现，首�
 
 不限终端（安卓，苹果，Windows，Mac 都可用），流量便宜（服务器 1TB 只要 30 元），方便（一键脚本，不需要专业知识）。
 
-## 为什么要自己搭建 SS/SSR？
+### 为什么要自己搭建 SS/SSR？
 
 你也许会觉得买 SS 服务也很方便，但是你得要考虑以下几个问题。首先，买的 SS 服务，限制很多，终端可能只能同时在线 2 个，每个月就一点点流量可能价格却不便宜，有时候还被别人做手脚，流量跑的贼快；其次，别人收钱跑路怎么办？很多这种情况的；更重要的是，如第一个问题中描述的shadowsocks 原理，如果有心人做了一点手脚，是可以得到你的访问记录的；而自己搭建 SS/SSR 服务，一键脚本也就 10 来分钟就可以搞定。
 
-[**Hostwinds**](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1216) 是一家美国主机商，成立于 2010 年，国内站长使用较多的是 Hostwinds 美国 VPS 主机产品。由于 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1224) 美国 VPS 主机采用的是 SSD 硬盘，而且所有方案都有全球 CDN 加速功能，因而也备受用户青睐。 如今 Hostwinds 主机商提供的产品方案也非常丰富，包括虚拟主机、云主机、VPS主机以及独立主机等。目前 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1216) 主要有达拉斯、西雅图 2 个数据中心，其中西雅图数据中心在国内访问速度最快。现在 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1224) 提供免费更换IP了，没错，就是免费，免费，随意更换，可以一键解决 IP 被墙的问题了。通过 Hostwinds 搭建 SSR 是不错的选择，今天就讲解下 Hostwinds 搭建 SSR 教程。
+[搬瓦工VPS（BandwagonHost）](https://bandwagonhost.com/aff.php?aff=54381) 隶属于美国IT7公司旗下的一款便宜年付KVM架构的VPS主机商家，从2013年开始推出低价VPS主机配置进入市场，确实受到广大网友的喜欢。2019年春节期间，[搬瓦工VPS](https://bandwagonhost.com/aff.php?aff=54381)主机商又提供包括香港PCCW、洛杉矶CN2 GIA、洛杉矶CN2 GIA-E，以及CN2 GT等12个数据中心，相比同类商家，[搬瓦工VPS](https://bwh88.net/aff.php?aff=54381&pid=57) 主机商的配置是比较高，线路还是比较好的。[搬瓦工VPS](https://bwh88.net/aff.php?aff=54381&pid=94) 商家支持支付宝、微信、PAYPAL、银联以及信用卡多种付款方式，这个也是很多国内用户选择的原因之一。通过 搬瓦工VPS 搭建 SSR 是不错的选择，今天就讲解下 搬瓦工VPS 搭建 SSR 教程。
 
-## 1、购买 Hostwinds VPS
+## 1、购买 搬瓦工VPS
 
-首先确认不要使用任何代理，网络是什么 IP 就是什么 IP ，不然可能需要人工审核，导致 Hostwinds VPS 购买显示 "Pending" 状态， 不能即时创建服务激活。
+**注意：**
 
-1、通过[ Hostwinds 优惠链接进入](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1224)Hostwinds 首页，选择 “VPS” 下的 "Unmanaged VPS" ，这里是最便宜的**(注意千万不要选择页面上 3.29 美元那个，那个是虚拟空间，不是 VPS !!!)**。
+- 不要挂代理！否则会被判为欺骗；
+- **注册时地址填中国；**
+- 如果点击购买链接进入页面显示 “Out of Stock” 即为售空，可选择更高一级或其它套餐。
 
-![img](https://user-images.githubusercontent.com/52620310/62405902-216e0d00-b5d6-11e9-8361-a3a75797b52f.jpg)
+### 1、选择套餐
 
-2、进入 VPS 选择页面后，根据自己的需要的配置选择套餐，一般我们选择最低配置就够用了，然后点击 “Order” 按钮进入信息填写页面，如下所示：
+5个搬瓦工套餐机房的**速度比较**：搬瓦工香港PCCW  > 搬瓦工CN2 GIA-E  > 搬瓦工CN2 GIA  > 搬瓦工CN2  > 搬瓦工KVM套餐，价格自然也是这个顺序。
 
-![img](https://user-images.githubusercontent.com/52620310/62405905-27fc8480-b5d6-11e9-85d3-70c4f202ef17.jpg)
+简单推荐如下：
 
-3、进入信息填写页面后首先填写账号信息，一般是新用户我们填写左边的姓、名、邮箱、密码，然后点击 “Submit” 进入下一步，如下图所示：
+1. 需要**低延迟建站**或者**游戏加速**：搬瓦工香港PCCW；
+2. **性价比建站方案**：搬瓦工CN2 GIA-E（[点击直达](https://bwh88.net/aff.php?aff=54381&pid=87)）
+3. **性价比方案**：搬瓦工CN2 年付49.99美元（[点击直达](https://bwh88.net/aff.php?aff=54381&pid=57)）
+4. **补货通知**：对于不急着购买的用户，可以等待搬瓦工CN2 GIA-E限量版补货（[点击直达](https://bwh88.net/aff.php?aff=54381&pid=94)（如果你看到的时候正好有货，那么不要迟疑，就它了，性价比最高）），目前大概1-4周会补货一次。
 
-![img](https://user-images.githubusercontent.com/52620310/62405907-2cc13880-b5d6-11e9-8dd3-bca5e119f97d.jpg)
+**优惠码：**`BWH26FXH3HIQ`，付款时使用可优惠 6.25% 。**（重要！）**
 
-4、页面跳转后填写用户信息，如下图所示：
+> **选择建议：在预算范围内尽量选择质量最高的，免得买完不满意再折腾。优先选择 CN2 GT 和 GIA 套餐。为方便大家选择，下面列出了搬瓦工目前所有套餐和简介。**
 
-![img](https://user-images.githubusercontent.com/52620310/62405909-321e8300-b5d6-11e9-8efc-d25563e38ea1.jpg)
+推荐购买的搬瓦工套餐如下
 
-5、然后选择购买时间、数据中心 、操作系统，红色部分需要自己选择，绿色一般我们默认，可以按月购买，但是建议第一次购买时间选择长一点，这样优惠要大很多，不然后面续费优惠力度就没有这么大了。 如下图所示：
+| 线路    | CPU  | 内存     | 硬盘   | 带宽      | 流量        | 价格              | 链接                                               |
+| ------- | ---- | -------- | ------ | --------- | ----------- | ----------------- | -------------------------------------------------- |
+| 香港    | 2 核 | 2048 MB  | 40 GB  | 1 G       | 500GB / 月  | **$89.99 / 月**   | [购买](https://bwh88.net/aff.php?aff=54381&pid=95) |
+| 香港    | 4 核 | 4096 MB  | 80 GB  | 1 G       | 1000GB / 月 | $155.99 / 月      | [购买](https://bwh88.net/aff.php?aff=54381&pid=96) |
+| 香港    | 6 核 | 8192 MB  | 160 GB | 1 G       | 2000GB / 月 | $299.99 / 月      | [购买](https://bwh88.net/aff.php?aff=54381&pid=97) |
+| 香港    | 8 核 | 16384 MB | 320 GB | 1 G       | 4000GB / 月 | $589.99 / 月      | [购买](https://bwh88.net/aff.php?aff=54381&pid=98) |
+| -       | -    | -        | -      | -         | -           | -                 | -                                                  |
+| CN2 GIA | 2 核 | 1 GB     | 20 GB  | **2.5 G** | 1000GB / 月 | **$65.99 / 半年** | [购买](https://bwh88.net/aff.php?aff=54381&pid=87) |
+| CN2 GIA | 3 核 | 2 GB     | 40 GB  | **2.5 G** | 2000GB / 月 | $69.99 / 季       | [购买](https://bwh88.net/aff.php?aff=54381&pid=88) |
+| CN2 GIA | 4 核 | 4 GB     | 80 GB  | **2.5 G** | 3000GB / 月 | $49.99 / 月       | [购买](https://bwh88.net/aff.php?aff=54381&pid=89) |
+| CN2 GIA | 6 核 | 8 GB     | 160 GB | **5 G**   | 5000GB / 月 | $75.99 / 月       | [购买](https://bwh88.net/aff.php?aff=54381&pid=90) |
+| -       | -    | -        | -      | -         | -           | -                 | -                                                  |
+| CN2 GIA | 1 核 | 512 MB   | 10 GB  | 1 G       | 300GB / 月  | **$39.99 / 年**   | [购买](https://bwh88.net/aff.php?aff=54381&pid=71) |
+| CN2 GIA | 1 核 | 512 MB   | 10 GB  | 1 G       | 500GB / 月  | **$49.99 / 年**   | [购买](https://bwh88.net/aff.php?aff=54381&pid=94) |
+| CN2 GIA | 2 核 | 1024 MB  | 20 GB  | 1 G       | 1000GB / 月 | **$25.99 / 季**   | [购买](https://bwh88.net/aff.php?aff=54381&pid=72) |
+| CN2 GIA | 3 核 | 2048 MB  | 40 GB  | 1 G       | 2000GB / 月 | $51.99 / 季       | [购买](https://bwh88.net/aff.php?aff=54381&pid=73) |
+| CN2 GIA | 4 核 | 4096 MB  | 80 GB  | 1 G       | 3000GB / 月 | $32.99 / 月       | [购买](https://bwh88.net/aff.php?aff=54381&pid=74) |
+| CN2 GIA | 6 核 | 8GB      | 160 GB | 1 G       | 5000GB / 月 | $62.99 / 月       | [购买](https://bwh88.net/aff.php?aff=54381&pid=75) |
+| CN2 GIA | 8 核 | 16GB     | 320 GB | 1 G       | 8000GB / 月 | $119.99 / 月      | [购买](https://bwh88.net/aff.php?aff=54381&pid=76) |
+| -       | -    | -        | -      | -         | -           | -                 | -                                                  |
+| CN2     | 1 核 | 1024 MB  | 20 GB  | 1 G       | 1000GB / 月 | **$49.99 / 年**   | [购买](https://bwh88.net/aff.php?aff=54381&pid=57) |
+| CN2     | 1 核 | 2048 MB  | 40 GB  | 1 G       | 2000GB / 月 | $52.99 / 半年     | [购买](https://bwh88.net/aff.php?aff=54381&pid=58) |
+| CN2     | 2 核 | 4096 MB  | 80 GB  | 1 G       | 3000GB / 月 | $59.99 / 季       | [购买](https://bwh88.net/aff.php?aff=54381&pid=59) |
+| CN2     | 2 核 | 8 GB     | 160 GB | 1 G       | 5000GB / 月 | $39.99 / 月       | [购买](https://bwh88.net/aff.php?aff=54381&pid=67) |
+| CN2     | 3 核 | 16 GB    | 320 GB | 1 G       | 8000GB / 月 | $79.99 / 月       | [购买](https://bwh88.net/aff.php?aff=54381&pid=68) |
+| -       | -    | -        | -      | -         | -           | -                 | -                                                  |
+| 普通    | 2 核 | 1024 MB  | 20 GB  | 1 G       | 1 TB / 月   | **$49.99 / 年**   | [购买](https://bwh88.net/aff.php?aff=54381&pid=44) |
+| 普通    | 3 核 | 2 GB     | 40 GB  | 1 G       | 2 TB / 月   | $52.99 / 半年     | [购买](https://bwh88.net/aff.php?aff=54381&pid=45) |
+| 普通    | 4 核 | 4 GB     | 80 GB  | 1 G       | 3 TB / 月   | $19.99 / 月       | [购买](https://bwh88.net/aff.php?aff=54381&pid=46) |
+| 普通    | 5 核 | 8 GB     | 160 GB | 1 G       | 4 TB / 月   | $39.99 / 月       | [购买](https://bwh88.net/aff.php?aff=54381&pid=47) |
+| 普通    | 6 核 | 16 GB    | 320 GB | 1 G       | 5 TB / 月   | $79.99 / 月       | [购买](https://bwh88.net/aff.php?aff=54381&pid=48) |
+| 普通    | 7 核 | 24 GB    | 480 GB | 1 G       | 6 TB / 月   | $119.99 / 月      | [购买](https://bwh88.net/aff.php?aff=54381&pid=49) |
 
-![img](https://user-images.githubusercontent.com/52620310/62405910-36e33700-b5d6-11e9-916a-21611cae95ba.jpg)
+选择哪个套餐？如果你不知道选择哪个套餐
+下面这是最常见的购买套餐
 
-6、默认是自动云备份的，如果不需要去掉勾选， 如下图所示：
+| 线路    | CPU  | 内存    | 硬盘  | 带宽      | 流量        | 价格              | 链接                                               |
+| ------- | ---- | ------- | ----- | --------- | ----------- | ----------------- | -------------------------------------------------- |
+| 普通    | 2 核 | 1024 MB | 20 GB | 1 G       | 1 TB / 月   | **$49.99 / 年**   | [购买](https://bwh88.net/aff.php?aff=54381&pid=44) |
+| CN2     | 1 核 | 1024 MB | 20 GB | 1 G       | 1000GB / 月 | **$49.99 / 年**   | [购买](https://bwh88.net/aff.php?aff=54381&pid=57) |
+| CN2 GIA | 1 核 | 512 MB  | 10 GB | 1 G       | 300GB / 月  | **$39.99 / 年**   | [购买](https://bwh88.net/aff.php?aff=54381&pid=71) |
+| CN2 GIA | 1 核 | 512 MB  | 10 GB | 1 G       | 500GB / 月  | **$49.99 / 年**   | [购买](https://bwh88.net/aff.php?aff=54381&pid=94) |
+| CN2 GIA | 2 核 | 1024 MB | 20 GB | 1 G       | 1000GB / 月 | **$25.99 / 季**   | [购买](https://bwh88.net/aff.php?aff=54381&pid=72) |
+| CN2 GIA | 2 核 | 1 GB    | 20 GB | **2.5 G** | 1000GB / 月 | **$65.99 / 半年** | [购买](https://bwh88.net/aff.php?aff=54381&pid=87) |
+| 香港    | 2 核 | 2048 MB | 40 GB | 1 G       | 500GB / 月  | **$89.99 / 月**   | [购买](https://bwh88.net/aff.php?aff=54381&pid=95) |
 
-![img](https://user-images.githubusercontent.com/52620310/62405913-3c408180-b5d6-11e9-908d-d475887eda70.jpg)
+（**注：年付会优惠大概两个月的金额；**部分套餐可能会缺货；或太火了取消了月付方案，只有年付/季付）
 
-7、然后选择付款方式，一般我们选择支付宝进行付款 （只有国内 IP 访问的时候才有支付宝付款方式），如下图所示：
+### 1.2 添加商品
 
-![img](https://user-images.githubusercontent.com/52620310/62405915-406c9f00-b5d6-11e9-90d8-7eed10538637.jpg)
+在上面选择合适的套餐，点击对应购买链接，进入添加界面，选择付费方式、机房，然后点击 **“Add to Cart”** 添加。
 
-8、最后确认价格（不同时期可能价格有些许不同，如果通过前面优惠链接点击购买会有优惠），勾选同意协议，然后点击“Complete Order”按钮进行下单， 如下图所示：
-
-![img](https://user-images.githubusercontent.com/52620310/62405916-4498bc80-b5d6-11e9-8ecd-77d1f9587e94.jpg)
-
-9、下单完成后订单结果如下图所示：
-
-![img](https://user-images.githubusercontent.com/52620310/62405918-482c4380-b5d6-11e9-970d-4fce99d5d1e6.jpg)
+![1](https://user-images.githubusercontent.com/54033249/70500777-50cdf100-1b57-11ea-81e9-a549026c6631.png)
 
 
+
+### 1.3 确认订单
+
+订单确认：输入**优惠码** **BWH26FXH3HIQ** → “Validata Code” → “Checkout” 付款。
+
+![2](https://user-images.githubusercontent.com/54033249/70500779-51668780-1b57-11ea-9e5a-bf2b93c3f0ff.png)
+
+![3](https://user-images.githubusercontent.com/54033249/70500780-51668780-1b57-11ea-97d5-fbf4ea03cbdb.png)
+
+订单页面，输入注册信息。**如实填写，中国就填中国！**否则可能判断为欺骗购买失败。
+
+付款方式选择支付宝，**“Complete Order”**，完成订单。
+
+![4](https://user-images.githubusercontent.com/54033249/70500781-51668780-1b57-11ea-9466-56cb6b594b23.png)
+
+
+
+支付完成功后会收到邮件通知。**SSH 的 IP、密码和端口号会发送到我们的邮箱。**可以通过 Xshell 等 SSH 工具登录 VPS 系统进行操作。（未收到请检查垃圾箱）
+
+![7](https://user-images.githubusercontent.com/54033249/70500787-53304b00-1b57-11ea-8729-8bcd91a19a7b.png)
+
+**购买创建 VPS 完成！**
 
 ## 2、SSH 连接 Hostwinds
 
-首先你需要通过 SSH 连接 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1216) 的 Linux VPS，连接 Linux VPS 需要使用 SSH 工具，这里推荐使用 Xshell 可以复制粘贴命令，Xshell 本身是需要付款的，作为中国人当然是使用 XX 版了，这里提供下载包如下所示：
+首先你需要通过 SSH 连接 [搬瓦工](https://bandwagonhost.com/aff.php?aff=54381) 的 Linux VPS，连接 Linux VPS 需要使用 SSH 工具，这里推荐使用 Xshell 可以复制粘贴命令，Xshell 本身是需要付款的，作为中国人当然是使用 XX 版了，这里提供下载包如下所示：
 
 Xshell 下载地址：<https://pan.baidu.com/s/1v7RCM0IjZGn_q5aWS1WXWg>，提取码: q3jw
 
@@ -70,117 +131,123 @@ Xshell 下载地址：<https://pan.baidu.com/s/1v7RCM0IjZGn_q5aWS1WXWg>，提取
 
 1、打开 Xshell，点击左上角“文件”-“新建”，打开连接弹出库。
 
-[![11](https://user-images.githubusercontent.com/52620310/62409274-3b741380-b607-11e9-86f4-6841945da8f2.jpg)](https://user-images.githubusercontent.com/52620310/62409274-3b741380-b607-11e9-86f4-6841945da8f2.jpg)
+[![img](https://user-images.githubusercontent.com/52620310/62405920-537f6f00-b5d6-11e9-8665-b9ff1741d477.jpg)](https://user-images.githubusercontent.com/52620310/62405920-537f6f00-b5d6-11e9-8665-b9ff1741d477.jpg)
 
 2、在 Xshell 弹出框中输入 IP 和端口，端口一般是 22 默认，然后点击确认按钮，如下图所示：
 
-[![12](https://user-images.githubusercontent.com/52620310/62409279-3f079a80-b607-11e9-829a-dc6db2d6ce8e.jpg)](https://user-images.githubusercontent.com/52620310/62409279-3f079a80-b607-11e9-829a-dc6db2d6ce8e.jpg)
+[![img](https://user-images.githubusercontent.com/52620310/62405922-567a5f80-b5d6-11e9-8b7a-2662799e0585.jpg)](https://user-images.githubusercontent.com/52620310/62405922-567a5f80-b5d6-11e9-8b7a-2662799e0585.jpg)
 
 3、然后输入用户名 root，勾选记住用户名。
 
-[![13](https://user-images.githubusercontent.com/52620310/62409280-429b2180-b607-11e9-8438-48451de0dbaf.jpg)](https://user-images.githubusercontent.com/52620310/62409280-429b2180-b607-11e9-8438-48451de0dbaf.jpg)
+[![img](https://user-images.githubusercontent.com/52620310/62405925-5a0de680-b5d6-11e9-87bf-426f33dab264.jpg)](https://user-images.githubusercontent.com/52620310/62405925-5a0de680-b5d6-11e9-87bf-426f33dab264.jpg)
 
 4、然后输入密码，勾选记住密码，点击确定。
 
-[![14](https://user-images.githubusercontent.com/52620310/62409282-462ea880-b607-11e9-9da0-68ddc4f05bc0.jpg)](https://user-images.githubusercontent.com/52620310/62409282-462ea880-b607-11e9-9da0-68ddc4f05bc0.jpg)
+[![img](https://user-images.githubusercontent.com/52620310/62405927-5e3a0400-b5d6-11e9-9b46-231b6b152909.jpg)](https://user-images.githubusercontent.com/52620310/62405927-5e3a0400-b5d6-11e9-9b46-231b6b152909.jpg)
 
 完成以上步骤后就可以看到连接成功的界面，如下图所示：
 
-[![15](https://user-images.githubusercontent.com/52620310/62409283-49299900-b607-11e9-86be-f16913c9fcf3.jpg)](https://user-images.githubusercontent.com/52620310/62409283-49299900-b607-11e9-86be-f16913c9fcf3.jpg)
+[![img](https://user-images.githubusercontent.com/52620310/62405930-64c87b80-b5d6-11e9-9f01-3a5ab54e1dda.jpg)](https://user-images.githubusercontent.com/52620310/62405930-64c87b80-b5d6-11e9-9f01-3a5ab54e1dda.jpg)
 
-## 3、在 Hostwinds 上部署 SS 或 SSR
+## 3、搬瓦工 安装 SSR 开始
 
-我们首先输入第一条命令后回车：
-
-**SS代码：**
+在上图的待输入内容处，粘贴下面的命令（复制下面的命令，然后在 Xshell 待输入内容处“鼠标右键”/“粘贴”即可）：
 
 ```
-wget --no-check-certificate -O shadowsocks-all.sh 
-https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
+yum -y install wget
+wget -N –no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh && chmod +x ssr.sh && bash ssr.sh
 ```
 
-**SSR代码：**
+粘贴后会下载相关安装包，等待屏幕不动的时候按“回车键”，如下图所示：
 
-```
-wget --no-check-certificate 
-https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocksR.sh
-```
+[![img](https://user-images.githubusercontent.com/52620310/62405971-c5f04f00-b5d6-11e9-8347-343e29e69a29.jpg)](https://user-images.githubusercontent.com/52620310/62405971-c5f04f00-b5d6-11e9-8347-343e29e69a29.jpg)
 
-[![16](https://user-images.githubusercontent.com/52620310/62409286-4e86e380-b607-11e9-9521-913b40159d1f.jpg)](https://user-images.githubusercontent.com/52620310/62409286-4e86e380-b607-11e9-9521-913b40159d1f.jpg)
+然后等待一会儿，出现 SSR 安装的引导界面，输入数字1，按回车键进行 SSR 安装，如下图所示：
 
-等待如图所示之后，我们输入第2条命令，回车：
+[![img](https://user-images.githubusercontent.com/52620310/62405974-cab50300-b5d6-11e9-92ef-28ba7701a5c1.jpg)](https://user-images.githubusercontent.com/52620310/62405974-cab50300-b5d6-11e9-92ef-28ba7701a5c1.jpg)
 
-**SS代码：**
+然后输入端口，尽量选择一个比较大的数字，避免端口冲突，建议选择 8099，经验证 8080、8090 端口是被封了的，千万不要用这个（如果后面遇到可以登录 VPS，但是 ssr 上不了网，可能就是端口封了，修改一下 ssr 端口就可以了）， 然后回车，如下图所示：
 
-```
-chmod +x shadowsocks-all.sh
-```
+[![img](https://user-images.githubusercontent.com/52620310/62405976-d0124d80-b5d6-11e9-91dc-dba0511bea55.jpg)](https://user-images.githubusercontent.com/52620310/62405976-d0124d80-b5d6-11e9-91dc-dba0511bea55.jpg)
 
-**SSR代码：**
+然后输入 SSR 账号的密码，随便输入一个密码，这里输入123qweasd，然后回车，如下图所示：
 
-```
-chmod +x shadowsocksR.sh
-```
+[![img](https://user-images.githubusercontent.com/52620310/62405978-d6082e80-b5d6-11e9-8ab2-c987c2a60129.jpg)](https://user-images.githubusercontent.com/52620310/62405978-d6082e80-b5d6-11e9-8ab2-c987c2a60129.jpg)
 
-[![17](https://user-images.githubusercontent.com/52620310/62409289-52b30100-b607-11e9-8fdf-ad0403d9ff2d.jpg)](https://user-images.githubusercontent.com/52620310/62409289-52b30100-b607-11e9-8fdf-ad0403d9ff2d.jpg)
+然后输入 SSR 账号的加密方式，随便输入 10，选择 aes-256-cfb 的加密方式，然后回车，如下图所示：
 
-等待如图所示之后，我们输入第3条命令，回车：
+[![img](https://user-images.githubusercontent.com/52620310/62405979-dbfe0f80-b5d6-11e9-8238-bc7b391a1191.jpg)](https://user-images.githubusercontent.com/52620310/62405979-dbfe0f80-b5d6-11e9-8238-bc7b391a1191.jpg)
 
-**SS代码：**
+然后输入 SSR 账号的协议插件，随便输入 2，选择 auth_sha1_v4 的协议插件，然后回车，如下图所示：
 
-```
-./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
-```
+[![img](https://user-images.githubusercontent.com/52620310/62405981-e0c2c380-b5d6-11e9-8b98-01d17b915e8f.jpg)](https://user-images.githubusercontent.com/52620310/62405981-e0c2c380-b5d6-11e9-8b98-01d17b915e8f.jpg)
 
-**SSR代码：**
+然后选择是否设置协议插件兼容原版，随便输入 y，表示要设置，然后回车，如下图所示：
 
-```
-./shadowsocksR.sh 2>&1 | tee shadowsocksR.log
-```
+[![img](https://user-images.githubusercontent.com/52620310/62405984-e7513b00-b5d6-11e9-8580-e0dfeef1fdd5.jpg)](https://user-images.githubusercontent.com/52620310/62405984-e7513b00-b5d6-11e9-8580-e0dfeef1fdd5.jpg)
 
-我们将代码输入完成后便会看到如下图所示，提示我们为 Shadowsocks 服务设置一个个人密码。
+然后选择混淆插件，这里选择 1，然后回车，如下图所示：
 
-[![18](https://user-images.githubusercontent.com/52620310/62409291-5777b500-b607-11e9-98f5-2972c608ce69.jpg)](https://user-images.githubusercontent.com/52620310/62409291-5777b500-b607-11e9-98f5-2972c608ce69.jpg)
+[![img](https://user-images.githubusercontent.com/52620310/62405985-ec15ef00-b5d6-11e9-92a7-4756e17a332b.jpg)](https://user-images.githubusercontent.com/52620310/62405985-ec15ef00-b5d6-11e9-92a7-4756e17a332b.jpg)
 
-我们输入完密码后回车，接下来设置 Shadowsocks 服务端口，默认端口号 8989，或者我们输入 1–65535 间的数字都行。
+然后设置限制的设备数，如果要限制就输入对于的数字，如果不限制就直接回车，如下图所示：
 
-[![19](https://user-images.githubusercontent.com/52620310/62409293-5b0b3c00-b607-11e9-8b42-63e61b6b6638.jpg)](https://user-images.githubusercontent.com/52620310/62409293-5b0b3c00-b607-11e9-8b42-63e61b6b6638.jpg)
+[![img](https://user-images.githubusercontent.com/52620310/62405989-f1733980-b5d6-11e9-8ce5-763ece4d8dee.jpg)](https://user-images.githubusercontent.com/52620310/62405989-f1733980-b5d6-11e9-8ce5-763ece4d8dee.jpg)
 
-我们输入端口号后继续回车，接下来设置 Shadowsocks 加密方式，默认 **aes-256-gcm**即可。
+然后设置每个端口的速度，如果要限制就输入对于的数字，单位是 KB/S，如果不限制就直接回车，建议不限制速度，如下图所示：
 
-[![20](https://user-images.githubusercontent.com/52620310/62409294-5e062c80-b607-11e9-9e78-39e4c8269c35.png)](https://user-images.githubusercontent.com/52620310/62409294-5e062c80-b607-11e9-9e78-39e4c8269c35.png)
+[![img](https://user-images.githubusercontent.com/52620310/62405996-fb953800-b5d6-11e9-92dd-2908259317e5.jpg)](https://user-images.githubusercontent.com/52620310/62405996-fb953800-b5d6-11e9-92dd-2908259317e5.jpg)
 
-我们接下来按照上图所示按任意键开始部署 Shadowsocks，我们等待部署结束后就会看到我们所部署的 Shadowsocks 的配置信息。我们需要记下Shadowsocks的配置信息：***服务器IP**（Sever IP ）、**服务器端口号**（Serer Port）、**登录密码**（Password）和**加密方式**（Encryption Method）*，接下来就需要我们下载Shadowsocks客户端进行相关配置了！
+然后设置总的速度，如果要限制就输入对于的数字，单位是 KB/S，如果不限制就直接回车，建议不限制速度，如下图所示：
 
-[![21](https://user-images.githubusercontent.com/52620310/62409295-61011d00-b607-11e9-8fcb-75f6b07efee4.jpg)](https://user-images.githubusercontent.com/52620310/62409295-61011d00-b607-11e9-8fcb-75f6b07efee4.jpg)
+[![img](https://user-images.githubusercontent.com/52620310/62405997-0059ec00-b5d7-11e9-8e3e-af05163717a0.jpg)](https://user-images.githubusercontent.com/52620310/62405997-0059ec00-b5d7-11e9-8e3e-af05163717a0.jpg)
 
-## 4、Hostwinds 搭建 BBR 加速
+然后会开始部署，到下图所示的位置，提示你下载文件，输入：y
+
+[![img](https://user-images.githubusercontent.com/52620310/62405999-05b73680-b5d7-11e9-82ad-04028d5af096.jpg)](https://user-images.githubusercontent.com/52620310/62405999-05b73680-b5d7-11e9-82ad-04028d5af096.jpg)
+
+然后就耐心等待一会儿安装，如下图所示：
+
+[![img](https://user-images.githubusercontent.com/52620310/62406003-0c45ae00-b5d7-11e9-9ccf-6d949a2e177e.jpg)](https://user-images.githubusercontent.com/52620310/62406003-0c45ae00-b5d7-11e9-9ccf-6d949a2e177e.jpg)
+
+等安装完成之后就可以看到 SSR 账号 配置信息，如下图所示：
+
+[![img](https://user-images.githubusercontent.com/52620310/62406005-110a6200-b5d7-11e9-8d87-bbf262b22218.jpg)](https://user-images.githubusercontent.com/52620310/62406005-110a6200-b5d7-11e9-8d87-bbf262b22218.jpg)
+
+按照上面的图片就可以看到设置的 SSR 账号信息，包括 IP、端口、密码、加密方式、协议插件、混淆插件，这些信息都需要填入对应的 SSR 客户端。
+
+## 4、搬瓦工 搭建 BBR 加速
 
 虽然 SSR 搭建好了，但是速度还不是很快，要搭建 BBR 才快，下面我们就说说怎么搭建 BBR。
 
-BBR 是 Google 的一款 SSR 加速产品，使用下面的命令就可以实现 BBR 加速，只有 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1216) 等少数 KVM VPS 才支持 BBR 加速，这也是我们推荐选择 Hostwinds 的原因。
+BBR 是 Google 的一款 SSR 加速产品，使用下面的命令就可以实现 BBR 加速，只有 [搬瓦工](https://bwh88.net/aff.php?aff=54381&pid=57) 等少数 KVM VPS 才支持 BBR 加速，这也是我们推荐选择 搬瓦工 的原因。
 
-**安装 BBR：**
-
-```
-wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
-```
-
-**获取读写权限：**
+在 xShell 连接端输入，如下命令，然后回车：
 
 ```
+yum -y install wget
+wget –no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
 chmod +x bbr.sh
-```
-
-**启动BBR安装：**
-
-```
 ./bbr.sh
 ```
 
-接着按任意键，开始安装，坐等一会。最后完成后需要重启，根据提示输入：y，重启服务器即可生效
+[![img](https://user-images.githubusercontent.com/52620310/62406006-18317000-b5d7-11e9-8146-b9b05d4240d7.jpg)](https://user-images.githubusercontent.com/52620310/62406006-18317000-b5d7-11e9-8146-b9b05d4240d7.jpg)
 
-[![22](https://user-images.githubusercontent.com/52620310/62409296-65c5d100-b607-11e9-8ab6-e7945452cab3.jpg)](https://user-images.githubusercontent.com/52620310/62409296-65c5d100-b607-11e9-8ab6-e7945452cab3.jpg)
+然后按任意键进行部署
+
+[![img](https://user-images.githubusercontent.com/52620310/62406007-1c5d8d80-b5d7-11e9-822f-fd9ed195a88b.jpg)](https://user-images.githubusercontent.com/52620310/62406007-1c5d8d80-b5d7-11e9-822f-fd9ed195a88b.jpg)
+
+然后需要等待命令执行，大约5分钟，如下图所示：
+
+[![img](https://user-images.githubusercontent.com/52620310/62406009-22536e80-b5d7-11e9-826b-e1f1b0774db9.jpg)](https://user-images.githubusercontent.com/52620310/62406009-22536e80-b5d7-11e9-826b-e1f1b0774db9.jpg)
+
+会在下面的图片过程中等待一会儿
+
+[![img](https://user-images.githubusercontent.com/52620310/62406011-267f8c00-b5d7-11e9-8ac1-67599ff1facb.jpg)](https://user-images.githubusercontent.com/52620310/62406011-267f8c00-b5d7-11e9-8ac1-67599ff1facb.jpg)
+
+最后完成后需要重启，根据提示输入：y，重启服务器即可生效
+
+[![img](https://user-images.githubusercontent.com/52620310/62406015-2bdcd680-b5d7-11e9-9aec-fdf762a5f191.jpg)](https://user-images.githubusercontent.com/52620310/62406015-2bdcd680-b5d7-11e9-9aec-fdf762a5f191.jpg)
 
 如果错过了重启步骤，直接输入重启命令命令：
 
@@ -188,34 +255,30 @@ chmod +x bbr.sh
 reboot
 ```
 
-[![23](https://user-images.githubusercontent.com/52620310/62409299-6a8a8500-b607-11e9-91db-c5397402e708.jpg)](https://user-images.githubusercontent.com/52620310/62409299-6a8a8500-b607-11e9-91db-c5397402e708.jpg)
+[![img](https://user-images.githubusercontent.com/52620310/62406018-31d2b780-b5d7-11e9-819b-baa65e585c47.jpg)](https://user-images.githubusercontent.com/52620310/62406018-31d2b780-b5d7-11e9-819b-baa65e585c47.jpg)
 
-重新启动之后，输入 `lsmod | grep bbr` 如果看到 tcp_bbr 就说明 SSR 已经启动了。
-
-```
-lsmod | grep bbr
-```
+然后耐心等待，待服务器重启后即可自动开启 SSR 加速。
 
 
 
-## 5、客户端搭建SS代理
+## 5、客户端搭建ssr代理
 
-各种客户端版本下载地址：[各版本shadowsocks客户端下载地址](https://github.com/xiaoming2028/kexueshangwang/releases)
+各种客户端版本下载地址：[各版本SSR客户端官方下载地址](https://github.com/xiaoming2028/kexueshangwang/releases)
 
 以Windows为例：
 
-![shadowsocks-pc-windows](https://user-images.githubusercontent.com/54033249/63205980-476bd500-c0df-11e9-8cb7-5508b5cd0801.png)
+![ssr-pc-windows-config](https://user-images.githubusercontent.com/54033249/63205723-35883300-c0db-11e9-885b-985b140d48a4.png)
 
-在状态栏右击shadowsocks，勾选**开机启动**和**启动系统代理**，在**系统代理模式**中选择**PAC模式**，**服务器**->**编辑服务器**，一键安装shadowsocks的脚本默认服务器端口是1024，加密方式是aes-256-cfb，密码是你设置的密码，ip是你自己的VPS ip，保存即可~
+在状态栏右击shadowsocksR，在**系统代理模式**中选择**PAC模式**，再左击两次状态栏的图标打开编辑服务器界面，如上图所示，按照自己的服务器配置填充内容**，**保存即可~
 
-**PAC模式**是指国内可以访问的站点直接访问，不能直接访问的再走shadowsocks代理~
+**PAC模式**是指国内可以访问的站点直接访问，不能直接访问的再走shadowsocksR代理~
 
-OK！一键脚本搭建shadowsocks完毕！科学上网吧，兄弟！
+OK！一键脚本搭建shadowsocksR完毕！科学上网吧，兄弟！
 
 
 
-## 6、Hostwinds 搭建 SS 或 SSR 总结
+## 6、搬瓦工 搭建 SSR 总结
 
-以上就是美国 VPS Hostwinds 搭建 SSR 的教程，通过教可以轻松实现 Hostwinds 搭建 SSR，希望可以帮助需要使用 Hostwinds 搭建 SSR 的朋友。
+以上就是美国 VPS 搬瓦工搭建 SSR 的教程，通过教可以轻松实现搬瓦工搭建 SSR，希望可以帮助需要使用搬瓦工搭建 SSR 的朋友。
 
-[Hostwinds 最好美国VPS低至4.49美元/月](https://affiliates.hostwinds.com/hostwinds.php?id=7011&url=1216)，支持支付宝付款，欢迎购买注册。
+[搬瓦工最好美国VPS](https://bwh88.net/aff.php?aff=54381&pid=57)，支持支付宝付款，欢迎购买注册。
