@@ -10,55 +10,81 @@ shadowsocks 正常工作需要服务器端和客户端两端合作实现，首�
 
 不限终端（安卓，苹果，Windows，Mac 都可用），流量便宜（服务器 1TB 只要 30 元），方便（一键脚本，不需要专业知识）。
 
-## 为什么要自己搭建 SS/SSR？
+### 为什么要自己搭建 SS/SSR？
 
 你也许会觉得买 SS 服务也很方便，但是你得要考虑以下几个问题。首先，买的 SS 服务，限制很多，终端可能只能同时在线 2 个，每个月就一点点流量可能价格却不便宜，有时候还被别人做手脚，流量跑的贼快；其次，别人收钱跑路怎么办？很多这种情况的；更重要的是，如第一个问题中描述的shadowsocks 原理，如果有心人做了一点手脚，是可以得到你的访问记录的；而自己搭建 SS/SSR 服务，一键脚本也就 10 来分钟就可以搞定。
 
-[**Hostwinds**](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1216) 是一家美国主机商，成立于 2010 年，国内站长使用较多的是 Hostwinds 美国 VPS 主机产品。由于 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1224) 美国 VPS 主机采用的是 SSD 硬盘，而且所有方案都有全球 CDN 加速功能，因而也备受用户青睐。 如今 Hostwinds 主机商提供的产品方案也非常丰富，包括虚拟主机、云主机、VPS主机以及独立主机等。目前 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1216) 主要有达拉斯、西雅图 2 个数据中心，其中西雅图数据中心在国内访问速度最快。现在 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1224) 提供免费更换IP了，没错，就是免费，免费，随意更换，可以一键解决 IP 被墙的问题了。通过 Hostwinds 搭建 SSR 是不错的选择，今天就讲解下 Hostwinds 搭建 SSR 教程。
 
-## 1、购买 Hostwinds VPS
 
-首先确认不要使用任何代理，网络是什么 IP 就是什么 IP ，不然可能需要人工审核，导致 Hostwinds VPS 购买显示 "Pending" 状态， 不能即时创建服务激活。
+[Vultr VPS](https://www.vultr.com/?ref=8169051-4F) 主机是一家 2014 年成立的美国 VPS 主机服务商，它的母公司 Choopa 是已经有将近 20 年全球主机提供经验的老牌主机服务商。Vultr 至今才成立不到 4 年的时间，但是发展速度很快，目前拥有日本、美国、新加坡、英国、德国、法国、荷兰等全球 15 个数据中心。这个 VPS 服务商是按小时收费的，这意味着，架设一台 VPS 的成本几乎为零。假如你不想用美国的了，关机销毁然后再换到全球任何一个地区无压力。新手入门强烈推荐。
 
-1、通过[ Hostwinds 优惠链接进入](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1224)Hostwinds 首页，选择 “VPS” 下的 "Unmanaged VPS" ，这里是最便宜的**(注意千万不要选择页面上 3.29 美元那个，那个是虚拟空间，不是 VPS !!!)**。
 
-![img](https://user-images.githubusercontent.com/52620310/62405902-216e0d00-b5d6-11e9-8361-a3a75797b52f.jpg)
 
-2、进入 VPS 选择页面后，根据自己的需要的配置选择套餐，一般我们选择最低配置就够用了，然后点击 “Order” 按钮进入信息填写页面，如下所示：
+## 1、购买 Vultr VPS
 
-![img](https://user-images.githubusercontent.com/52620310/62405905-27fc8480-b5d6-11e9-85d3-70c4f202ef17.jpg)
+#### 1. Vultr VPS主机官网账户注册
 
-3、进入信息填写页面后首先填写账号信息，一般是新用户我们填写左边的姓、名、邮箱、密码，然后点击 “Submit” 进入下一步，如下图所示：
+Vultr 官网账户注册，我们打开官网后输入邮箱和密码进行点击 Create Account 进行账户创建！限时活动，**通过文中链接注册并在30天内充值25美金可获赠50美金额度**。
 
-![img](https://user-images.githubusercontent.com/52620310/62405907-2cc13880-b5d6-11e9-8dd3-bca5e119f97d.jpg)
+访问 Vultr 活动官网地址：[Vultr活动官网](https://www.vultr.com/?ref=8169051-4F)
 
-4、页面跳转后填写用户信息，如下图所示：
+[![1](https://user-images.githubusercontent.com/52620310/62409248-0a93de80-b607-11e9-9da8-99182bb51016.png)](https://user-images.githubusercontent.com/52620310/62409248-0a93de80-b607-11e9-9da8-99182bb51016.png)
 
-![img](https://user-images.githubusercontent.com/52620310/62405909-321e8300-b5d6-11e9-8efc-d25563e38ea1.jpg)
+##### **账户注册注意问题**
 
-5、然后选择购买时间、数据中心 、操作系统，红色部分需要自己选择，绿色一般我们默认，可以按月购买，但是建议第一次购买时间选择长一点，这样优惠要大很多，不然后面续费优惠力度就没有这么大了。 如下图所示：
+账户注册密码要求至少十位，而且必须至少包含一个大写字母、一个小写字母和一个数字，如果提示注册成功需要邮箱验证的话，请到注册邮箱查看邮件并点击 Verify Your E-mail 验证邮箱（收件箱如果没有收到，查看下垃圾箱）！
 
-![img](https://user-images.githubusercontent.com/52620310/62405910-36e33700-b5d6-11e9-916a-21611cae95ba.jpg)
+[![2](https://user-images.githubusercontent.com/52620310/62409253-11baec80-b607-11e9-8e85-7eb324fefa60.png)](https://user-images.githubusercontent.com/52620310/62409253-11baec80-b607-11e9-8e85-7eb324fefa60.png)
 
-6、默认是自动云备份的，如果不需要去掉勾选， 如下图所示：
+#### 2. Vultr 账户充值
 
-![img](https://user-images.githubusercontent.com/52620310/62405913-3c408180-b5d6-11e9-908d-d475887eda70.jpg)
+我们将 Vultr 账户注册好之后登录到 Vultr 官网后台景象账户充值。目前 Vultr 支持信用卡（Credit Card）、PayPal、比特币（Bitcoin）、支付宝（Alipay）和微信支付（WeChat Pay）五种付款方式。我们可以选择常用的支付宝和微信来进行充值即可。我们选择支付宝付款，确定首次充值金额，并且勾选同意条款后，点击按钮 **Pay with Alipay** 即可。
 
-7、然后选择付款方式，一般我们选择支付宝进行付款 （只有国内 IP 访问的时候才有支付宝付款方式），如下图所示：
+***PS：**如果我们有优惠码的话还可以在 Enter Code 输入优惠码并点击 Apply 进行应用，目前暂无官方优惠码！*
 
-![img](https://user-images.githubusercontent.com/52620310/62405915-406c9f00-b5d6-11e9-90d8-7eed10538637.jpg)
+![](https://img2018.cnblogs.com/blog/1765496/202002/1765496-20200220170947047-1755045251.jpg)
 
-8、最后确认价格（不同时期可能价格有些许不同，如果通过前面优惠链接点击购买会有优惠），勾选同意协议，然后点击“Complete Order”按钮进行下单， 如下图所示：
+我们稍等片刻后便会跳转到我们熟悉的支付宝付款页面，直接扫一扫或者登录账户付款就可以了，我们付款成功后可以在 Vultr 后台查看余额。
 
-![img](https://user-images.githubusercontent.com/52620310/62405916-4498bc80-b5d6-11e9-8ecd-77d1f9587e94.jpg)
+***PS：**为防止滥用账号重复申请，Vultr 会检测支付帐号，如果使用了同一个 PayPal 或信用卡去支付，会被 vultr 封号。*
 
-9、下单完成后订单结果如下图所示：
+![](https://img2018.cnblogs.com/blog/1765496/202002/1765496-20200220170951605-1862860575.jpg)
 
-![img](https://user-images.githubusercontent.com/52620310/62405918-482c4380-b5d6-11e9-970d-4fce99d5d1e6.jpg)
+#### 3.Vultr 创建服务器
 
-## 2、SSH 连接 Hostwinds
+我们将左侧栏菜单切换到 Servers 进行服务器创建，我们首先选择服务器机房位置地址。这里我们搭建 SS 或 SSR 的话推荐日本东京（Tokyo，Japan）和美国洛杉矶（Los Angeles，United States）。
 
-首先你需要通过 SSH 连接 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1216) 的 Linux VPS，连接 Linux VPS 需要使用 SSH 工具，这里推荐使用 Xshell 可以复制粘贴命令，Xshell 本身是需要付款的，作为中国人当然是使用 XX 版了，这里提供下载包如下所示：
+[![4](https://user-images.githubusercontent.com/52620310/62409258-1e3f4500-b607-11e9-8566-7712ed814588.png)](https://user-images.githubusercontent.com/52620310/62409258-1e3f4500-b607-11e9-8566-7712ed814588.png)
+
+Vultr VPS 主机操作系统我们选择默认 CentOS。
+
+[![5](https://user-images.githubusercontent.com/52620310/62409260-2303f900-b607-11e9-992b-75cabb3a0ddc.png)](https://user-images.githubusercontent.com/52620310/62409260-2303f900-b607-11e9-992b-75cabb3a0ddc.png)
+
+我们选择 Vultr 套餐计划，套餐计划的最低价格根据主机位置的不同而不同，目前选择的日本东京最低套餐计划每月 5 美元，每小时 0.007 美元，配置是 1 个 CPU，1G 内存和 1000GB 流量。这个最低套餐计划完全可以满足我们个人需要了。
+
+[![6](https://user-images.githubusercontent.com/52620310/62409262-26978000-b607-11e9-961e-375ef9c7e782.png)](https://user-images.githubusercontent.com/52620310/62409262-26978000-b607-11e9-961e-375ef9c7e782.png)
+
+***PS：****我们根据自己的需求去选择相应的 VPS 主机配置，Vultr 采用小时计费，如果我们不想继续使用或创建新的 VPS 的时候，可以销毁多余的 VPS，扣除的费用是已使用小时数乘以小时单价，而不是按月扣费！*
+
+我们如果对 IPv6 有需求的话可以勾选一下，其余的就保持默认就可以了，配置完成后我们直接点击 **Deploy Now** 进行 VPS 部署。
+
+[![7](https://user-images.githubusercontent.com/52620310/62409265-2b5c3400-b607-11e9-950f-766539fe587e.png)](https://user-images.githubusercontent.com/52620310/62409265-2b5c3400-b607-11e9-950f-766539fe587e.png)
+
+我们大约等待一分钟后就可以成功部署，当显示 **Running** 时，就表示部署已完成。之后你可以随时停用、重启或销毁它。
+
+[![8](https://user-images.githubusercontent.com/52620310/62409267-2f885180-b607-11e9-9b16-cb89e92448ee.png)](https://user-images.githubusercontent.com/52620310/62409267-2f885180-b607-11e9-9b16-cb89e92448ee.png)
+
+我们将 VPS 部署成功后就可以看到服务器的基本信息：ROOT 密码、IP 地址、内存、硬盘和带宽等相关信息，这样我们就成功部署了 VPS，接下来就要进行 SS 或 SSR 的搭建了。
+
+[![9](https://user-images.githubusercontent.com/52620310/62409268-331bd880-b607-11e9-90cc-a0b2b1da7188.png)](https://user-images.githubusercontent.com/52620310/62409268-331bd880-b607-11e9-90cc-a0b2b1da7188.png)
+
+我们创建好 VPS 之后在搭建 SS 或 SSR 之前我们可以通过 [IPIP.net](https://tools.ipip.net/traceroute.php) 这个网站对 IP 地址进行测试，VPS 正常响应的话我们就可以正常使用，如果无法连接的话我们就删除重新建一个 VPS。
+
+[![10](https://user-images.githubusercontent.com/52620310/62409272-3747f600-b607-11e9-92fe-9aea33a49423.png)](https://user-images.githubusercontent.com/52620310/62409272-3747f600-b607-11e9-92fe-9aea33a49423.png)
+
+## 2、SSH 连接 Vultr
+
+首先你需要通过 SSH 连接 [Vultr](https://www.vultr.com/?ref=8169051-4F) 的 Linux VPS，连接 Linux VPS 需要使用 SSH 工具，这里推荐使用 Xshell 可以复制粘贴命令，Xshell 本身是需要付款的，作为中国人当然是使用 XX 版了，这里提供下载包如下所示：
 
 Xshell 下载地址：<https://pan.baidu.com/s/1v7RCM0IjZGn_q5aWS1WXWg>，提取码: q3jw
 
@@ -68,221 +94,146 @@ Xshell 下载地址：<https://pan.baidu.com/s/1v7RCM0IjZGn_q5aWS1WXWg>，提取
 
 1、打开 Xshell，点击左上角“文件”-“新建”，打开连接弹出库。
 
-![img](https://user-images.githubusercontent.com/52620310/62405920-537f6f00-b5d6-11e9-8665-b9ff1741d477.jpg)
+[![11](https://user-images.githubusercontent.com/52620310/62409274-3b741380-b607-11e9-86f4-6841945da8f2.jpg)](https://user-images.githubusercontent.com/52620310/62409274-3b741380-b607-11e9-86f4-6841945da8f2.jpg)
 
 2、在 Xshell 弹出框中输入 IP 和端口，端口一般是 22 默认，然后点击确认按钮，如下图所示：
 
-![img](https://user-images.githubusercontent.com/52620310/62405922-567a5f80-b5d6-11e9-8b7a-2662799e0585.jpg)
+[![12](https://user-images.githubusercontent.com/52620310/62409279-3f079a80-b607-11e9-829a-dc6db2d6ce8e.jpg)](https://user-images.githubusercontent.com/52620310/62409279-3f079a80-b607-11e9-829a-dc6db2d6ce8e.jpg)
 
 3、然后输入用户名 root，勾选记住用户名。
 
-![img](https://user-images.githubusercontent.com/52620310/62405925-5a0de680-b5d6-11e9-87bf-426f33dab264.jpg)
+[![13](https://user-images.githubusercontent.com/52620310/62409280-429b2180-b607-11e9-8438-48451de0dbaf.jpg)](https://user-images.githubusercontent.com/52620310/62409280-429b2180-b607-11e9-8438-48451de0dbaf.jpg)
 
 4、然后输入密码，勾选记住密码，点击确定。
 
-![img](https://user-images.githubusercontent.com/52620310/62405927-5e3a0400-b5d6-11e9-9b46-231b6b152909.jpg)
+[![14](https://user-images.githubusercontent.com/52620310/62409282-462ea880-b607-11e9-9da0-68ddc4f05bc0.jpg)](https://user-images.githubusercontent.com/52620310/62409282-462ea880-b607-11e9-9da0-68ddc4f05bc0.jpg)
 
 完成以上步骤后就可以看到连接成功的界面，如下图所示：
 
-![img](https://user-images.githubusercontent.com/52620310/62405930-64c87b80-b5d6-11e9-9f01-3a5ab54e1dda.jpg)
+[![15](https://user-images.githubusercontent.com/52620310/62409283-49299900-b607-11e9-86be-f16913c9fcf3.jpg)](https://user-images.githubusercontent.com/52620310/62409283-49299900-b607-11e9-86be-f16913c9fcf3.jpg)
 
-**注意：**如果出现 Hostwinds 无法登录的情况，请参考以下解决办法：
-
-#### 密码不对导致 Hostwinds VPS 连接不上
-
-如果只是密码不对，显示 SSH 服务器拒绝了密码，如下图使用 Xshell 连接的显示示意图：
-
-![img](https://user-images.githubusercontent.com/52620310/62405932-698d2f80-b5d6-11e9-8c51-cd82d4997871.jpg)
-
-Hostwinds 采用 KVM，因此生成 Linux VPS 的密码的自动生成的，而 Hostwinds 发送的邮件中的密码可能不是VPS真实的密码，这时不知道密码是多少我们可以登录后台重新设置密码，步骤如下：
-
-1、访问 <https://clients.hostwinds.com/clientarea.php>，点击你的 Service，如下图所示：
-
-![img](https://user-images.githubusercontent.com/52620310/62405941-86296780-b5d6-11e9-8a92-50bdf3d4091b.jpg)
-
-2、然后点击管理按钮，到管理界面，如下图所示：
-
-![img](https://user-images.githubusercontent.com/52620310/62405942-8aee1b80-b5d6-11e9-82ba-16510e9012a2.jpg)
-
-3、然后点击修改密码按钮，在弹出框中重新输入密码，密码需要字母大小写、特殊符还有要一定长度：
-
-![img](https://user-images.githubusercontent.com/52620310/62405944-904b6600-b5d6-11e9-8d74-58896156e07b.jpg)
-
-4、修改后密码还没有生效，最关键的一步需要 重启服务器，才能生效，如下图所示点击重启：
-
-![img](https://user-images.githubusercontent.com/52620310/62405946-95a8b080-b5d6-11e9-80ea-e97308a31053.jpg)
-
-这样就能够使用你就可以使用你设置的密码登录 Hostwinds VPS 了。
-
-### 如果是国内屏蔽导致 Hostwinds VPS 连接不上
-
-我们都众所周知由于大陆的一些原因，国外 VPS 的 IP 是经常会被禁止的，如果被大陆屏蔽了，这种情况表现为可以 ping 通 IP，但是 SSH 连接不上。Hostwind VPS 是支持更换 IP。你可以通过 “Fix ISP Block” 功能来修复 IP，这个操作会自动修改 IP，具体操作我们具体看下。
-
-打开 [Hostwinds 的官网](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1224)，进入 Hostwinds 的后台控制面板：
-
-![img](https://user-images.githubusercontent.com/52620310/62405947-9b9e9180-b5d6-11e9-987e-a6a120eeacf2.jpg)
-
-然后输入用户名、密码登录
-
-![img](https://user-images.githubusercontent.com/52620310/62405949-a0634580-b5d6-11e9-96ea-4721c7d34d6c.jpg)
-
-选择需要换 IP 的 VPS，点击绿色 “Manage” 按钮
-
-![img](https://user-images.githubusercontent.com/52620310/62405950-a6f1bd00-b5d6-11e9-93f5-05364f558811.jpg)
-
-然后点击 “Click Here to Manage This Server” 的按钮
-
-![img](https://user-images.githubusercontent.com/52620310/62405955-ac4f0780-b5d6-11e9-9fd7-7ba7fb1df86f.jpg)
-
-点击 “Manage IPs” 按钮进行管理
-
-![img](https://user-images.githubusercontent.com/52620310/62405957-b113bb80-b5d6-11e9-9797-944039bc9af0.jpg)
-
-然后点击 “Fix ISP Block” 按钮进行 IP 修复，如下图所示：
-
-![img](https://user-images.githubusercontent.com/52620310/62405960-b5d86f80-b5d6-11e9-98eb-3cc0ba9b076f.jpg)
-
-然后点击 “Confirm” 按钮确认
-
-![img](https://user-images.githubusercontent.com/52620310/62405961-bb35ba00-b5d6-11e9-9d6d-d9a91bc73f98.jpg)
-
-然后 Hostwinds VPS 的 IP 就会自动更换了，然后注意还需要**重装系统**才行，重装系统如下图所示：
-
-![img](https://user-images.githubusercontent.com/52620310/62405969-c0930480-b5d6-11e9-9685-9e4eb8f21672.jpg)
-
-通过上面的方法就可以解决IP被屏蔽不能访问的问题了。
-
-## 3、Hostwinds 安装 SSR 开始
+## 3、在 Vultr 上部署 SS 或 SSR
 
 在上图的待输入内容处，粘贴下面的命令（复制下面的命令，然后在 Xshell 待输入内容处“鼠标右键”/“粘贴”即可）：
 
 ```
-yum -y install wget
-wget -N –no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh && chmod +x ssr.sh && bash ssr.sh
+wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
+chmod +x shadowsocks-all.sh
+./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
 ```
 
-粘贴后会下载相关安装包，等待屏幕不动的时候按“回车键”，如下图所示：
+（提示：如果运行上面第一条命令时，出现找不到wget之类的提示，则表明系统没有预装wget，先运行以下命令完成wget的安装）
 
-![VPS搭建SS](https://user-images.githubusercontent.com/52620310/62405971-c5f04f00-b5d6-11e9-8347-343e29e69a29.jpg)
+```
+CentOS：
+yum -y install wget
+Ubuntu/Debian：
+apt-get -y install wget
+```
 
-然后等待一会儿，出现 SSR 安装的引导界面，输入数字1，按回车键进行 SSR 安装，如下图所示：
+3.接下来会有几个参数需要选择，依次为：
 
-![VPS搭建SSR](https://user-images.githubusercontent.com/52620310/62405974-cab50300-b5d6-11e9-92ef-28ba7701a5c1.jpg)
+- 1.出现 SSR 安装的引导界面，输入数字2，按回车键进行 SSR 安装，如下图所示：
 
-然后输入端口，尽量选择一个比较大的数字，避免端口冲突，建议选择 8099，经验证 8080、8090 端口是被封了的，千万不要用这个（如果后面遇到可以登录 VPS，但是 ssr 上不了网，可能就是端口封了，修改一下 ssr 端口就可以了）， 然后回车，如下图所示：
+![](https://img2018.cnblogs.com/blog/1765496/202002/1765496-20200219170444298-1781403471.jpg)
 
-![VPS搭建SS](https://user-images.githubusercontent.com/52620310/62405976-d0124d80-b5d6-11e9-91dc-dba0511bea55.jpg)
+- 2.然后会提示设置SSR密码，输入自定义密码后按回车，建议不要使用默认密码。
 
-然后输入 SSR 账号的密码，随便输入一个密码，这里输入123qweasd，然后回车，如下图所示：
+![](https://img2018.cnblogs.com/blog/1765496/202002/1765496-20200219170459564-483295482.jpg)
 
-![VPS搭建SSR](https://user-images.githubusercontent.com/52620310/62405978-d6082e80-b5d6-11e9-8ab2-c987c2a60129.jpg)
+- 3.接下来选择SSR要使用的服务器端口，尽量选择一个比较大的数字，避免端口冲突，建议选择 8099，经验证 8080、8090 端口是被封了的，千万不要用这个（如果后面遇到可以登录 VPS，但是 ssr 上不了网，可能就是端口封了，修改一下 ssr 端口就可以了）， 然后回车，如下图所示：
 
-然后输入 SSR 账号的加密方式，随便输入 10，选择 aes-256-cfb 的加密方式，然后回车，如下图所示：
+![](https://img2018.cnblogs.com/blog/1765496/202002/1765496-20200219170505895-1680287078.jpg)
 
-![VPS搭建SS](https://user-images.githubusercontent.com/52620310/62405979-dbfe0f80-b5d6-11e9-8238-bc7b391a1191.jpg)
+- 4.然后选择加密方式，如果选择chacha20的话，就输入对应序号12，按回车继续。
 
-然后输入 SSR 账号的协议插件，随便输入 2，选择 auth_sha1_v4 的协议插件，然后回车，如下图所示：
+![](https://img2018.cnblogs.com/blog/1765496/202002/1765496-20200219170514488-1849603840.jpg)
 
-![VPS搭建SS](https://user-images.githubusercontent.com/52620310/62405981-e0c2c380-b5d6-11e9-8b98-01d17b915e8f.jpg)
+- 5.接下来选择协议，建议选择自auth_aes128_md5开始以下的几种，输入对应序号按回车。
 
-然后选择是否设置协议插件兼容原版，随便输入 y，表示要设置，然后回车，如下图所示：
+![](https://img2018.cnblogs.com/blog/1765496/202002/1765496-20200219170543807-1693020693.jpg)
 
-![VPS搭建SS](https://user-images.githubusercontent.com/52620310/62405984-e7513b00-b5d6-11e9-8580-e0dfeef1fdd5.jpg)
+- 6.然后选择混淆方式，如下图所示，选择好后按回车。
 
-然后选择混淆插件，这里选择 1，然后回车，如下图所示：
+![](https://img2018.cnblogs.com/blog/1765496/202002/1765496-20200219170553509-1844501351.jpg)
 
-![VPS搭建SS](https://user-images.githubusercontent.com/52620310/62405985-ec15ef00-b5d6-11e9-92a7-4756e17a332b.jpg)
+- 7.以上参数选择完成后，按任意键开始安装。
 
-然后设置限制的设备数，如果要限制就输入对于的数字，如果不限制就直接回车，如下图所示：
+![](https://img2018.cnblogs.com/blog/1765496/202002/1765496-20200219170557621-2142405219.jpg)
 
-![VPS搭建SS](https://user-images.githubusercontent.com/52620310/62405989-f1733980-b5d6-11e9-8ce5-763ece4d8dee.jpg)
+- 8.安装完成后，会有如下图安装成功的提示。
 
-然后设置每个端口的速度，如果要限制就输入对于的数字，单位是 KB/S，如果不限制就直接回车，建议不限制速度，如下图所示：
-
-![VPS搭建SS](https://user-images.githubusercontent.com/52620310/62405996-fb953800-b5d6-11e9-92dd-2908259317e5.jpg)
-
-然后设置总的速度，如果要限制就输入对于的数字，单位是 KB/S，如果不限制就直接回车，建议不限制速度，如下图所示：
-
-![VPS搭建SS](https://user-images.githubusercontent.com/52620310/62405997-0059ec00-b5d7-11e9-8e3e-af05163717a0.jpg)
-
-然后会开始部署，到下图所示的位置，提示你下载文件，输入：y
-
-![VPS搭建SS](https://user-images.githubusercontent.com/52620310/62405999-05b73680-b5d7-11e9-82ad-04028d5af096.jpg)
-
-然后就耐心等待一会儿安装，如下图所示：
-
-![VPS搭建SS](https://user-images.githubusercontent.com/52620310/62406003-0c45ae00-b5d7-11e9-9ccf-6d949a2e177e.jpg)
-
-等安装完成之后就可以看到 SSR 账号 配置信息，如下图所示：
-
-![VPS搭建SS](https://user-images.githubusercontent.com/52620310/62406005-110a6200-b5d7-11e9-8d87-bbf262b22218.jpg)
+![](https://img2018.cnblogs.com/blog/1765496/202002/1765496-20200219170559370-1432378159.jpg)
 
 按照上面的图片就可以看到设置的 SSR 账号信息，包括 IP、端口、密码、加密方式、协议插件、混淆插件，这些信息都需要填入对应的 SSR 客户端。
 
-## 4、Hostwinds 搭建 BBR 加速
+- 9.经过以上几个简单的参数选择后，SSR服务器端已经自动安装成功了。保险起见，输入reboot重启VPS服务器，SSR会自动随系统重启。
+
+## 4、Vultr 搭建 BBR 加速
 
 虽然 SSR 搭建好了，但是速度还不是很快，要搭建 BBR 才快，下面我们就说说怎么搭建 BBR。
 
-BBR 是 Google 的一款 SSR 加速产品，使用下面的命令就可以实现 BBR 加速，只有 [Hostwinds](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1216) 等少数 KVM VPS 才支持 BBR 加速，这也是我们推荐选择 Hostwinds 的原因。
+BBR 是 Google 的一款 SSR 加速产品，使用下面的命令就可以实现 BBR 加速，只有 [Vultr](https://www.vultr.com/?ref=8169051-4F) 等少数 KVM VPS 才支持 BBR 加速，这也是我们推荐选择 Vultr 的原因。
 
-在 xShell 连接端输入，如下命令，然后回车：
+**安装 BBR：**
 
 ```
-yum -y install wget
-wget –no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
+wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
+```
+
+**获取读写权限：**
+
+```
 chmod +x bbr.sh
-./bbr.sh
 ```
 
-![img](https://user-images.githubusercontent.com/52620310/62406006-18317000-b5d7-11e9-8146-b9b05d4240d7.jpg)
+**启动BBR安装：**
 
-然后按任意键进行部署
+```
+./bbr.sh
 
-![img](https://user-images.githubusercontent.com/52620310/62406007-1c5d8d80-b5d7-11e9-822f-fd9ed195a88b.jpg)
+```
 
-然后需要等待命令执行，大约5分钟，如下图所示：
+接着按任意键，开始安装，坐等一会。最后完成后需要重启，根据提示输入：y，重启服务器即可生效
 
-![img](https://user-images.githubusercontent.com/52620310/62406009-22536e80-b5d7-11e9-826b-e1f1b0774db9.jpg)
-
-会在下面的图片过程中等待一会儿
-
-![img](https://user-images.githubusercontent.com/52620310/62406011-267f8c00-b5d7-11e9-8ac1-67599ff1facb.jpg)
-
-最后完成后需要重启，根据提示输入：y，重启服务器即可生效
-
-![img](https://user-images.githubusercontent.com/52620310/62406015-2bdcd680-b5d7-11e9-9aec-fdf762a5f191.jpg)
+[![22](https://user-images.githubusercontent.com/52620310/62409296-65c5d100-b607-11e9-8ab6-e7945452cab3.jpg)](https://user-images.githubusercontent.com/52620310/62409296-65c5d100-b607-11e9-8ab6-e7945452cab3.jpg)
 
 如果错过了重启步骤，直接输入重启命令命令：
 
 ```
 reboot
+
 ```
 
-![img](https://user-images.githubusercontent.com/52620310/62406018-31d2b780-b5d7-11e9-819b-baa65e585c47.jpg)
+[![23](https://user-images.githubusercontent.com/52620310/62409299-6a8a8500-b607-11e9-91db-c5397402e708.jpg)](https://user-images.githubusercontent.com/52620310/62409299-6a8a8500-b607-11e9-91db-c5397402e708.jpg)
 
-然后耐心等待，待服务器重启后即可自动开启 SSR 加速。(这里注意如果是 centos 7 系统重启后可能防火墙阻止了 SSR，需要关闭防火墙，如果是 centos 6 就不会有这个问题，所以我们建议使用的是 Hostwinds 的 centos 6 操作系统。)
+重新启动之后，输入 `lsmod | grep bbr` 如果看到 tcp_bbr 就说明 SSR 已经启动了。
+
+```
+lsmod | grep bbr
+
+```
 
 
 
-## 5、客户端搭建ssr代理
+## 5、客户端搭建SS代理
 
-各种客户端版本下载地址：[各版本SSR客户端官方下载地址](https://github.com/xiaoming2028/kexueshangwang/releases)
+各种客户端版本下载地址：[各版本shadowsocks客户端下载地址](https://github.com/xiaoming2028/kexueshangwang/releases)
 
 以Windows为例：
 
-![ssr-pc-windows-config](https://user-images.githubusercontent.com/54033249/63205723-35883300-c0db-11e9-885b-985b140d48a4.png)
+![shadowsocks-pc-windows](https://user-images.githubusercontent.com/54033249/63205980-476bd500-c0df-11e9-8cb7-5508b5cd0801.png)
 
-在状态栏右击shadowsocksR，在**系统代理模式**中选择**PAC模式**，再左击两次状态栏的图标打开编辑服务器界面，如上图所示，按照自己的服务器配置填充内容，保存即可~
+在状态栏右击shadowsocks，勾选**开机启动**和**启动系统代理**，在**系统代理模式**中选择**PAC模式**，**服务器**->**编辑服务器**，一键安装shadowsocks的脚本默认服务器端口是1024，加密方式是aes-256-cfb，密码是你设置的密码，ip是你自己的VPS ip，保存即可~
 
-**PAC模式**是指国内可以访问的站点直接访问，不能直接访问的再走shadowsocksR代理~
+**PAC模式**是指国内可以访问的站点直接访问，不能直接访问的再走shadowsocks代理~
 
-OK！一键脚本搭建shadowsocksR完毕！可以上网了，兄弟！
+OK！一键脚本搭建shadowsocks完毕！科学上网吧，兄弟！
 
 
 
-## 6、Hostwinds 搭建 SSR 总结
+## 6、Vultr 搭建 SS 或 SSR 总结
 
-以上就是美国 VPS Hostwinds 搭建 SSR 的教程，通过教可以轻松实现 Hostwinds 搭建 SSR，希望可以帮助需要使用 Hostwinds 搭建 SSR 的朋友。
+以上就是美国 VPS Vultr 搭建 SS 或 SSR 的教程，通过教程可以轻松实现 Vultr 搭建 SS 或 SSR，希望可以帮助需要使用 Vultr 搭建 SS 或 SSR 的朋友。
 
-[Hostwinds 最好美国VPS低至4.49美元/月](https://affiliates.hostwinds.com/hostwinds.php?id=7011&tid2=github&url=1216)，支持支付宝付款，欢迎购买注册。
-
+[**通过本链接注册并在30天内充值25美金可获赠50美金额度**](https://www.vultr.com/?ref=8169051-4F)，支持支付宝付款，欢迎购买注册。
